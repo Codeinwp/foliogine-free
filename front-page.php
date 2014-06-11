@@ -7,6 +7,8 @@
 get_header();
 ?>
 <?php 
+if ( 'posts' == get_option( 'show_on_front' ) ) {
+
 	$date = cwp('date');
 	$the_author = cwp('author');
 	$the_category = cwp('category');
@@ -126,4 +128,11 @@ get_header();
 	</div><!-- .container -->
 </section><!-- .bloglist -->	
 <?php
-get_footer(); ?>
+}
+else {
+	$id = get_the_ID(); //the current id page
+
+	get_template_part('sections');   
+}
+get_footer();
+?>
