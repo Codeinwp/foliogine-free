@@ -16,7 +16,7 @@ Custom wordpress theme created by Codeinwp.com
 
 
 = License =
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public Licemse.
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v2.
 
 The exceptions to this license are as follows: 
 * tinynav.js 
