@@ -393,3 +393,4 @@ function cwp_default_title( $title ) {
 
 	return $title;
 }
+

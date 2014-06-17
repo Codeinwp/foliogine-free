@@ -25,7 +25,8 @@
 		 
 		 <span class="spinner" ></span>
 			<a href="http://themeisle.com/themes/foliogine-pro/" class="view-pro" target="_blank">View pro version</a>
-			<a href="http://themeisle.com/themes/foliogine-pro/" class="view-pro" target="_blank">Check documentation</a>					
+			<a href="http://themeisle.com/documentation-foliogine-free" class="view-pro" target="_blank">Check documentation</a>	
+			<a href="http://themeisle.com/forums/forum/foliogine-free" class="view-pro" target="_blank">Forum</a>					
 			<button  type="button" class="button-primary cwp_save">
 				<?php _e('Save All Changes','cwp'); ?>			</button>
 				
