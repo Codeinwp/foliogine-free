@@ -28,7 +28,7 @@
 
  *
 
- * @package Codeinwp theme
+ * @package themeisle theme
 
  */
 
@@ -54,19 +54,19 @@
 
  *
 
- * @uses codeinwp_theme_header_style()
+ * @uses themeisle_theme_header_style()
 
- * @uses codeinwp_theme_admin_header_style()
+ * @uses themeisle_theme_admin_header_style()
 
- * @uses codeinwp_theme_admin_header_image()
+ * @uses themeisle_theme_admin_header_image()
 
  *
 
- * @package Codeinwp theme
+ * @package themeisle theme
 
  */
 
-function codeinwp_theme_custom_header_setup() {
+function foliogine_lite_theme_custom_header_setup() {
 
 	$args = array(
 
@@ -80,17 +80,17 @@ function codeinwp_theme_custom_header_setup() {
 
 		'flex-height'            => true,
 
-		'wp-head-callback'       => 'codeinwp_theme_header_style',
+		'wp-head-callback'       => 'foliogine_lite_theme_header_style',
 
-		'admin-head-callback'    => 'codeinwp_theme_admin_header_style',
+		'admin-head-callback'    => 'foliogine_lite_theme_admin_header_style',
 
-		'admin-preview-callback' => 'codeinwp_theme_admin_header_image',
+		'admin-preview-callback' => 'foliogine_lite_theme_admin_header_image',
 
 	);
 
 
 
-	$args = apply_filters( 'codeinwp_theme_custom_header_args', $args );
+	$args = apply_filters( 'foliogine_lite_theme_custom_header_args', $args );
 
 
 
@@ -115,7 +115,7 @@ function codeinwp_theme_custom_header_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'codeinwp_theme_custom_header_setup' );
+add_action( 'after_setup_theme', 'foliogine_lite_theme_custom_header_setup' );
 
 
 
@@ -141,7 +141,7 @@ add_action( 'after_setup_theme', 'codeinwp_theme_custom_header_setup' );
 
  *
 
- * @package Codeinwp theme
+ * @package themeisle theme
 
  */
 
@@ -169,7 +169,7 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 
 
 
-if ( ! function_exists( 'codeinwp_theme_header_style' ) ) :
+if ( ! function_exists( 'foliogine_lite_theme_header_style' ) ) :
 
 /**
 
@@ -177,11 +177,11 @@ if ( ! function_exists( 'codeinwp_theme_header_style' ) ) :
 
  *
 
- * @see codeinwp_theme_custom_header_setup().
+ * @see themeisle_theme_custom_header_setup().
 
  */
 
-function codeinwp_theme_header_style() {
+function foliogine_lite_theme_header_style() {
 
 
 
@@ -243,11 +243,11 @@ function codeinwp_theme_header_style() {
 
 }
 
-endif; // codeinwp_theme_header_style
+endif; // themeisle_theme_header_style
 
 
 
-if ( ! function_exists( 'codeinwp_theme_admin_header_style' ) ) :
+if ( ! function_exists( 'foliogine_lite_theme_admin_header_style' ) ) :
 
 /**
 
@@ -255,11 +255,11 @@ if ( ! function_exists( 'codeinwp_theme_admin_header_style' ) ) :
 
  *
 
- * @see codeinwp_theme_custom_header_setup().
+ * @see foliogine_lite_theme_custom_header_setup().
 
  */
 
-function codeinwp_theme_admin_header_style() {
+function foliogine_lite_theme_admin_header_style() {
 
 ?>
 
@@ -299,11 +299,11 @@ function codeinwp_theme_admin_header_style() {
 
 }
 
-endif; // codeinwp_theme_admin_header_style
+endif; // foliogine_lite_theme_admin_header_style
 
 
 
-if ( ! function_exists( 'codeinwp_theme_admin_header_image' ) ) :
+if ( ! function_exists( 'foliogine_lite_theme_admin_header_image' ) ) :
 
 /**
 
@@ -311,11 +311,11 @@ if ( ! function_exists( 'codeinwp_theme_admin_header_image' ) ) :
 
  *
 
- * @see codeinwp_theme_custom_header_setup().
+ * @see foliogine_lite_theme_custom_header_setup().
 
  */
 
-function codeinwp_theme_admin_header_image() { ?>
+function foliogine_lite_theme_admin_header_image() { ?>
 
 	<div id="headimg">
 
@@ -347,5 +347,5 @@ function codeinwp_theme_admin_header_image() { ?>
 
 <?php }
 
-endif; // codeinwp_theme_admin_header_image
+endif; // foliogine_lite_theme_admin_header_image
 

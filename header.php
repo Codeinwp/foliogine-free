@@ -17,31 +17,31 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
- 
+
 <?php wp_head(); ?>
-   
+
 </head>
 
-<body <?php body_class(); ?>>		
+<body <?php body_class(); ?>>
 
     <header>
-    
+
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          
+
 			<?php
-		  
-			$logo = cwp('logo_image');
-			$logo_text = cwp('logo_text');
-			
-			if(isset($logo) && $logo != '') :
+
+			$logo = foliogine_lite('logo_image');
+			$logo_text = foliogine_lite('logo_text');
+
+			if (isset($logo) && $logo != '') :
 				echo '<a class="brand" href="'.get_site_url().'" title="'.get_bloginfo('name').'">';
-                if(isset($logo_text) && $logo_text != ''):
+                if (isset($logo_text) && $logo_text != ''):
                     echo '<img src="'.$logo.'" alt="'.$logo_text.'">';
-                else:	
+                else:
                     echo '<img src="'.$logo.'" alt="'.get_bloginfo('name').'">';
-				endif;	
+				endif;
 				echo '</a>';
             else:
 				echo ' <div class="main-title">';
@@ -50,15 +50,15 @@
 				echo '</div>';
 			endif;
 			?>
-          
+
 
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'top_menu' ) ); ?>
             </nav><!-- #site-navigation -->
-          
-          
+
+
         </div><!-- /.container -->
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
-          
+
     </header>
