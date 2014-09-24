@@ -1,5 +1,5 @@
-= Foliogine =
-Author: codeinwp.com
+= Foliogine Lite =
+Author: themeisle.com
 
 Tags: black, yellow, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style,
 featured-images, theme-options, threaded-comments, translation-ready
@@ -11,91 +11,49 @@ Tested up to:		3.8.2
 
 Foliogine
 == Description ==
-Custom wordpress theme created by Codeinwp.com
+ A stunning, responsive Portfolio WordPress theme excellent for an a portfolio or a blog.
 
 
 
 = License =
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v2.
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v3.
 
-The exceptions to this license are as follows: 
-* tinynav.js 
-	Licensed under the MIT license.
+The exceptions to this license are as follows:
 
-	Copyright (c) 2011-2014 Viljami Salminen, http://viljamis.com/
+* tinynav.js
+	License: Distributed under the terms of The MIT License (MIT)
+	Copyright: 2011-2014 Viljami Salminen - http://viljamis.com/
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* jquery.sharrre
+	License: Distributed under the terms of The MIT License (MIT)
+	Copyright:  2014 Julien Hany - http://sharrre.com/
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* retina.js
+    License: Distributed under the terms of The MIT License (MIT)
+	Copyright:  2012 Imulus,Ben Atkin - http://imulus.github.io/retinajs/
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	
-* jquery.sharrre is licensed under MIT License
-	* retina.js 
+* bootstrap.js
+    License: Distributed under the Apache License, Version 2.0
+    Copyright:  2012 Twitter, Inc.
 
+* jquery.bxslider.js
+	License: Distributed under the WTFPL license - http://sam.zoy.org/wtfpl/
+    Copyright:  2012, Steven Wanderski - http://stevenwanderski.com - http://bxcreative.com
 
-	(MIT License)
-
-
-	Copyright (C) 2012 Imulus
-
-
-	Copyright (C) 2012 Ben Atkin
-
-
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	
-* bootstrap licensed under Apache License, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
-* tabs/tabs.js
-	NO COPYRIGHTS OR LICENSES. DO WHAT YOU LIKE.
-	
-* jquery.bxslider.js 
-	Released under the MIT license - http://opensource.org/licenses/MIT
-	
 * jquery.donutchart
-	Copyright (c) 2012 Michael Tibben, http://webdock.com.au/
+    License: Distributed under the terms of The MIT License (MIT)
+	Copyright:  2012 Michael Tibben, http://webdock.com.au/
 
-	Permission is hereby granted, free of charge, to any person obtaining
-	a copy of this software and associated documentation files (the
-	"Software"), to deal in the Software without restriction, including
-	without limitation the rights to use, copy, modify, merge, publish,
-	distribute, sublicense, and/or sell copies of the Software, and to
-	permit persons to whom the Software is furnished to do so, subject to
-	the following conditions:
+* tabs.js
+    License: Distributed under Creative Commons Zero
 
-	The above copyright notice and this permission notice shall be
-	included in all copies or substantial portions of the Software.
+* retina.js
+    License: Distributed under MIT License (MIT)
+    Copyright (c) 2013 Imulus, LLC, Ben Atkin
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-	NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-	LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	
-* retina.js 
+* jqcycle.js
+    License: Distributed under MIT License (MIT)
 
-
-	(MIT License)
-
-
-	Copyright (C) 2012 Imulus
-
-
-	Copyright (C) 2012 Ben Atkin
-
-
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.	
+* slider-bg.jpg
+    License: Distributed under Creative Commons Zero
+    Surce: https://unsplash.imgix.net/46/unsplash_52c319226cefb_1.JPG?q=75&fm=jpg&auto=format&s=3d1ae11e42d98eac6dbcfccfb013d81b

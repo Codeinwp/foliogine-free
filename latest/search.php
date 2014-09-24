@@ -7,17 +7,17 @@
 ?>
 
 <?php get_header(); ?>
-<?php 
-	$date = cwp('date');
-	$the_author = cwp('author');
-	$the_category = cwp('category');
-	$tags = cwp('tags');
-	$featured_image = cwp('featured_image');
+<?php
+	$date = foliogine_lite('date');
+	$the_author = foliogine_lite('author');
+	$the_category = foliogine_lite('category');
+	$tags = foliogine_lite('tags');
+	$featured_image = foliogine_lite('featured_image');
 ?>
 <section class="title-page-area">
 	<div class="container">
 
-		<h1><?php printf( __( 'Search Results for: %s', 'cwp' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1><?php printf( __( 'Search Results for: %s', 'foliogine' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
     </div><!-- .container -->
 </section><!-- .title-page-area -->
@@ -26,49 +26,49 @@
 	<div class="container">
 		<div class="left">
 		<?php
-		while ( have_posts() ) : the_post(); 
-			cwp_setPostViews(get_the_ID());
+		while ( have_posts() ) : the_post();
+			foliogine_lite_setPostViews(get_the_ID());
 		?>
 			<div class="list-post-box">
 				<div class="list-post-info">
 				<?php
-					
-					if(isset($date) && $date == 'show') {
+
+					if (isset($date) && $date == 'show') {
 						$d = get_the_date('F j Y','','',false);
 						$dt = get_the_date('Y-m-d','','',false);
 						echo '<time datetime="'.$dt.'"><span>'.$d.'</span></time>';
-					}	
-					if(isset($the_author) && $the_author == 'show') {
-						$author = get_the_author();
-						echo '<p class="hidden-tablet"><span>'.__('Posted by ','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
-					if(isset($the_category) && $the_category == 'show') {
-						
+					if (isset($the_author) && $the_author == 'show') {
+						$author = get_the_author();
+						echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+					}
+					if (isset($the_category) && $the_category == 'show') {
+
 						$category = get_the_category();
-						$cats = get_the_category($post->ID); 
-						if(!empty($cats)) {
-							echo '<p class="hidden-tablet"><span>'.__('Posted in ','cwp').'</span>';  
+						$cats = get_the_category($post->ID);
+						if (!empty($cats)) {
+							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine').'</span>';
 							foreach($cats as $c) {
 								echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
 							}
 							echo '</p>';
-						}  
+						}
 					}
-					if(isset($tags) && $tags == 'show' && has_tag()) {
-						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','cwp').'</span>';
+					if (isset($tags) && $tags == 'show' && has_tag()) {
+						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine').'</span>';
 						the_tags('');
-						echo '</p>';		
-					}	
-				?>									
+						echo '</p>';
+					}
+				?>
 				</div><!-- .list-post-info -->
-			
+
 				<div <?php post_class('list-post-content'); ?>>
 					<div class="post-img">
-					<?php if(isset($featured_image) && $featured_image == 'Show') { ?>
+					<?php if (isset($featured_image) && $featured_image == 'Show') { ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php 
+						<?php
 							if ( has_post_thumbnail($post->ID) ) {
-								echo get_the_post_thumbnail($post->ID, 'blog-small'); 
+								echo get_the_post_thumbnail($post->ID, 'blog-small');
 							}
 						?>
 						</a>
@@ -77,61 +77,61 @@
 						<p><?php the_excerpt(); ?></p>
 						<div class="post-info-phone">
 						<?php
-							if(isset($the_author) && $the_author == 'show') {
+							if (isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted by ','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+								echo '<p><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
-							if(isset($the_category) && $the_category == 'show') {
-								
+							if (isset($the_category) && $the_category == 'show') {
+
 								$category = get_the_category();
-								$cats = get_the_category($post->ID); 
-								if(!empty($cats)) {
-									echo '<p class="hidden-tablet"><span>'.__('Posted in ','cwp').'</span>';  
+								$cats = get_the_category($post->ID);
+								if (!empty($cats)) {
+									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine').'</span>';
 									foreach($cats as $c) {
 										echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
 									}
 									echo '</p>';
-								} 
+								}
 							}
-							if(isset($tags) && $tags == 'Show' && has_tag()) {
-									echo '<p><span>'.__('Tagged with ','cwp').'</span>';
+							if (isset($tags) && $tags == 'Show' && has_tag()) {
+									echo '<p><span>'.__('Tagged with ','foliogine').'</span>';
 									the_tags('');
 									echo '</p>';
-							}	
+							}
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($post->ID);?>" title="Continue reading" class="continue"><?php _e('Continue reading','cwp') ?> ></a>
+							<a href="<?php echo get_permalink($post->ID);?>" title="Continue reading" class="continue"><?php _e('Continue reading','foliogine') ?> ></a>
 							<a class="icons comm" title="Comments"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
-							<a class="icons eye" title="Views"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
+							<a class="icons eye" title="Views"><span></span><?php echo foliogine_lite_getPostViews(get_the_ID()); ?></a>
 						</p><!-- .bottom-line -->
 					</div><!-- .post-img -->
 				</div><!-- .list-post-content -->
-						
+
 				<div class="clear"></div>
 			</div><!-- .list-post-box -->
-			<?php endwhile; ?>	
+			<?php endwhile; ?>
 
-					
+
 
 			<div class="pagination-wrap">
-				
+
 				<p class="right">
-					<?php previous_posts_link( __( 'Prev', 'cwp' ) ); ?>
-					<?php next_posts_link( __( 'Next', 'cwp' ) ); ?>
+					<?php previous_posts_link( __( 'Prev', 'foliogine' ) ); ?>
+					<?php next_posts_link( __( 'Next', 'foliogine' ) ); ?>
 				</p>
-				
+
 			</div><!-- /pagination-->
-					
+
 		</div><!-- .left -->
-				
-				
-				
+
+
+
 		<div class="sidebar hidden-phone">
 
 			<?php get_sidebar(); ?>
-			
-		</div><!-- .sidebar --> 	 
+
+		</div><!-- .sidebar -->
 	</div><!-- .container -->
 </section><!-- .bloglist -->
 
@@ -140,45 +140,45 @@
     /*
 	* Slider section
 	*/
-	$slider_search = cwp('slider_search');
-	
-	if(isset($slider_search) && $slider_search == 'show'):
+	$slider_search = foliogine_lite('slider_search');
+
+	if (isset($slider_search) && $slider_search == 'show'):
         get_template_part('/inc/slider');
 	endif;
-		
+
 	/*
 	* Our services
 	*/
-	$services_search = cwp('services_search');
-	
-	if(isset($services_search) && $services_search == 'show'):
+	$services_search = foliogine_lite('services_search');
+
+	if (isset($services_search) && $services_search == 'show'):
         get_template_part('/inc/our-services');
 	endif;
-	
+
     /*
 	* Our team section
 	*/
-	$team_search = cwp('team_search');
-	
-	if(isset($team_search) && $team_search == 'show'):
+	$team_search = foliogine_lite('team_search');
+
+	if (isset($team_search) && $team_search == 'show'):
         get_template_part('/inc/our-team');
 	endif;
-	
+
 	/*
 	* Testimonial
 	*/
-	$testimonial_search = cwp('testimonial_search');
-	
-	if(isset($testimonial_search) && $testimonial_search == 'show'):
+	$testimonial_search = foliogine_lite('testimonial_search');
+
+	if (isset($testimonial_search) && $testimonial_search == 'show'):
         get_template_part('/inc/testimonial-options');
 	endif;
 
     /*
     * Download brochure section
     */
-	$download_search = cwp('download_search');
-    
-	if(isset($download_search) && $download_search == 'show'):
+	$download_search = foliogine_lite('download_search');
+
+	if (isset($download_search) && $download_search == 'show'):
         get_template_part('/inc/brochure');
     endif;
 
@@ -186,10 +186,10 @@
 	/*
 	* OUR SKILLS section
 	*/
-	$skill_search = cwp('skill_search');
-	
-	if(isset($skill_search) && $skill_search == 'show'):
+	$skill_search = foliogine_lite('skill_search');
+
+	if (isset($skill_search) && $skill_search == 'show'):
         get_template_part('/inc/our-skills');
     endif;
-			
+
  get_footer(); ?>

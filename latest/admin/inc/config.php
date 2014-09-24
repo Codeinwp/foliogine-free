@@ -1,5 +1,5 @@
 <?php
-	class cwpConfig{
+	class foliogine_liteConfig{
 		public static $admin_page_menu_name ;
 		public static  $admin_page_title 	;
 		public static  $admin_page_header 	;
@@ -10,41 +10,42 @@
 		public static  $menu_slug 	;
 		public static $structure;
 		public static function init(){
-		
+
 			$all_pages = array();
 			$default_pages = array();
-			$pages = get_pages(); 
+			$pages = get_pages();
 			foreach ( $pages as $page ):
 				$all_pages[$page->ID] = $page->post_title;
 				array_push($default_pages, $page->ID);
 			endforeach;
-		
+            $all_pages[0] = "FrontPage";
+            array_push($default_pages, 0);
 			self::$admin_page_menu_name 	 = "Theme Options";
 			self::$admin_page_title 		 = "Theme Options";
 			self::$admin_page_header	 	 = "Theme Options";
 			self::$admin_template_directory_uri  = get_template_directory_uri() . '/admin/layout';
 			self::$admin_template_directory  = get_template_directory() . '/admin/layout';
-			self::$admin_uri  		= 	get_template_directory_uri() . '/admin/'; 
+			self::$admin_uri  		= 	get_template_directory_uri() . '/admin/';
 			self::$admin_path 	 	= 	get_template_directory() . '/admin/';
-			self::$menu_slug  		= 	"theme_options";
+			self::$menu_slug  		= 	"foliogine_lite_theme_options";
 			self::$structure	= array(
 						array(
 							 "type"=>"tab",
 							 "name"=>"General options",
 							 "options"=>array(
-								
+
 								/* Logo */
 								array(
 									"type"=>"group",
 									"name"=>"Logo",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Logo",
 											"description"=>"Logo",
 											"id"=>"logo_image",
-											"default"=> "" 
+											"default"=> ""
 										),
 										array(
 											"type"=>"input_text",
@@ -53,7 +54,7 @@
 											"id"=>"logo_text",
 											"default"=>""
 										)
-									)								
+									)
 								),
 								/* Download brochure section */
 								array(
@@ -61,7 +62,7 @@
 									"name"=>"Download brochure section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -112,7 +113,7 @@
 											"id"=>"download_url",
 											"default"=>""
 										)
-									)								
+									)
 								),
 								/* Slider section */
 								array(
@@ -120,7 +121,7 @@
 									"name"=>"Slider section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -155,56 +156,56 @@
 											"name"=>"Slider big title",
 											"description"=>"Enter a big title for the slider.",
 											"id"=>"slider_bigtitle",
-											"default"=>""
+											"default"=>__('Hello and welcome, we are ThemeIsle, browse our portfolio.','foliogine')
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Slider title",
 											"description"=>"Enter a title for the slider.",
 											"id"=>"slider_title",
-											"default"=>""
+											"default"=>__('Professional WordPress theme','foliogine')
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Slider subtitle",
 											"description"=>"Enter a subtitle for the slider.",
 											"id"=>"slider_subtitle",
-											"default"=>""
+											"default"=>__('Fully responsive and retina ready.','foliogine')
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Slide image 1",
 											"description"=>"Slide image 1",
 											"id"=>"slide_image1",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/img-on-screen.jpg'
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Slide image 2",
 											"description"=>"Slide image 2",
 											"id"=>"slide_image2",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/image-on-screen-colors.jpg'
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Slide image 3",
 											"description"=>"Slide image 3",
 											"id"=>"slide_image3",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/img-on-screen-mobile-tablet.jpg'
 										)
 									)
 								),
-								
+
 								/* Our services */
 								array(
 									"type"=>"group",
 									"name"=>"Our services section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -235,92 +236,92 @@
 											"default"=>"hide"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Image 1",
 											"description"=>"",
 											"id"=>"services_image1",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/icon-puzzle.png'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Title 1",
 											"description"=>"Enter the first service title",
 											"id"=>"services_title1",
-											"default"=>""
+											"default"=>"Service 1"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Text 1",
 											"description"=>"Enter the first service text",
 											"id"=>"services_text1",
-											"default"=>""
+											"default"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Image 2",
 											"description"=>"",
 											"id"=>"services_image2",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/icon-work.png'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Title 2",
 											"description"=>"Enter the second service title",
 											"id"=>"services_title2",
-											"default"=>""
+											"default"=>"Service 2"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Text 2",
 											"description"=>"Enter the second service text",
 											"id"=>"services_text2",
-											"default"=>""
+											"default"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Image 3",
 											"description"=>"",
 											"id"=>"services_image3",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/icon-direnction.png'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Title 3",
 											"description"=>"Enter the third service title",
 											"id"=>"services_title3",
-											"default"=>""
+											"default"=>"Service 3"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Text 3",
 											"description"=>"Enter the third service text",
 											"id"=>"services_text3",
-											"default"=>""
+											"default"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Image 4",
 											"description"=>"",
 											"id"=>"services_image4",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/icon-friends.png'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Title 4",
 											"description"=>"Enter the fourth service title",
 											"id"=>"services_title4",
-											"default"=>""
+											"default"=>"Service 4"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Text 4",
 											"description"=>"Enter the fourth service text",
 											"id"=>"services_text4",
-											"default"=>""
+											"default"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
 										)
 									)
 								),
@@ -330,7 +331,7 @@
 									"name"=>"Our team section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -361,95 +362,95 @@
 											"default"=>"hide"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Person image 1",
 											"description"=>"",
 											"id"=>"team_image1",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/team-img1.jpg'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Name 1",
 											"description"=>"Enter the first person's name to appear in the our team area",
 											"id"=>"team_name1",
-											"default"=>""
+											"default"=>"John Doe"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Job 1",
 											"description"=>"Enter the first person's job to appear in the our team area",
 											"id"=>"team_job1",
-											"default"=>""
+											"default"=>"CEO"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Person image 2",
 											"description"=>"",
 											"id"=>"team_image2",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/team-img1.jpg'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Name 2",
 											"description"=>"Enter the second person's name to appear in the our team area",
 											"id"=>"team_name2",
-											"default"=>""
+											"default"=>"John Doe"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Job 2",
 											"description"=>"Enter the second person's job to appear in the our team area",
 											"id"=>"team_job2",
-											"default"=>""
+											"default"=>"CEO"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Person image 3",
 											"description"=>"",
 											"id"=>"team_image3",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/team-img1.jpg'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Name 3",
 											"description"=>"Enter the third person's name to appear in the our team area",
 											"id"=>"team_name3",
-											"default"=>""
+											"default"=>"John Doe"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Job 3",
 											"description"=>"Enter the third person's job to appear in the our team area",
 											"id"=>"team_job3",
-											"default"=>""
+											"default"=>"CEO"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Person image 4",
 											"description"=>"",
 											"id"=>"team_image4",
-											"default"=> "" 
+											"default"=> get_template_directory_uri().'/img/team-img1.jpg'
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Name 4",
 											"description"=>"Enter the fourth person's name to appear in the our team area",
 											"id"=>"team_name4",
-											"default"=>""
+											"default"=>"John Doe"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Person Job 4",
 											"description"=>"Enter the fourth person's job to appear in the our team area",
 											"id"=>"team_job4",
-											"default"=>""
+											"default"=>"CEO"
 										)
-										
-										
+
+
 									)
 								),
 								/* testimonials */
@@ -458,7 +459,7 @@
 									"name"=>"Testimonials section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -493,28 +494,28 @@
 											"name"=>"Title",
 											"description"=>"Enter the title to appear in the testimonials area",
 											"id"=>"testimonial_title",
-											"default"=>""
+											"default"=>"Lorem Ipsum"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Content",
 											"description"=>"Enter the text to appear in the testimonials area",
 											"id"=>"testimonial_content",
-											"default"=>""
+											"default"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Author",
 											"description"=>"Enter the author to appear in the testimonials area",
 											"id"=>"testimonial_author",
-											"default"=>""
+											"default"=>"John Doe"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Info about the author",
 											"description"=>"Enter a small piece of information to appear after the author name in the testimonials area",
 											"id"=>"testimonial_info",
-											"default"=>""
+											"default"=>"CEO"
 										)
 									)
 								),
@@ -524,7 +525,7 @@
 									"name"=>"Our skills section options",
 									"options"=>	array(
 										array(
-									
+
 											"type"=>"multiselect",
 											"name"=>"Select all the pages where you want this section to appear",
 											"description"=>"Hold down the control (ctrl) button to select multiple options",
@@ -559,14 +560,14 @@
 											"name"=>"Title",
 											"description"=>"Enter the title to appear in the skills area",
 											"id"=>"skill_title",
-											"default"=>""
+											"default"=>"Our skills"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"First skill text",
 											"description"=>"Enter the text to appear in the first skill area",
 											"id"=>"skill_text1",
-											"default"=>""
+											"default"=>"CSS"
 										),
 										array(
 											"type"=>"input_number",
@@ -574,16 +575,16 @@
 											"description"=>"Enter the value for the first skill area",
 											"id"=>"skill_val1",
 											"max"=>100,
-											"min"=>1, 
+											"min"=>1,
 											"step"=>1,
-											"default"=>"1"
+											"default"=>"80"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Second skill text",
 											"description"=>"Enter the text to appear in the second skill area",
 											"id"=>"skill_text2",
-											"default"=>""
+											"default"=>"HTML"
 										),
 										array(
 											"type"=>"input_number",
@@ -591,16 +592,16 @@
 											"description"=>"Enter the value for the second skill area",
 											"id"=>"skill_val2",
 											"max"=>100,
-											"min"=>1, 
+											"min"=>1,
 											"step"=>1,
-											"default"=>"1"
+											"default"=>"90"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Third skill text",
 											"description"=>"Enter the text to appear in the third skill area",
 											"id"=>"skill_text3",
-											"default"=>""
+											"default"=>"jQuery"
 										),
 										array(
 											"type"=>"input_number",
@@ -608,16 +609,16 @@
 											"description"=>"Enter the value for the third skill area",
 											"id"=>"skill_val3",
 											"max"=>100,
-											"min"=>1, 
+											"min"=>1,
 											"step"=>1,
-											"default"=>"1"
+											"default"=>"100"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Fourth skill text",
 											"description"=>"Enter the text to appear in the fourth skill area",
 											"id"=>"skill_text4",
-											"default"=>""
+											"default"=>"Photoshop"
 										),
 										array(
 											"type"=>"input_number",
@@ -625,20 +626,20 @@
 											"description"=>"Enter the value for the fourth skill area",
 											"id"=>"skill_val4",
 											"max"=>100,
-											"min"=>1, 
+											"min"=>1,
 											"step"=>1,
-											"default"=>"1"
+											"default"=>"80"
 										),
 									)
-								)								
+								)
 							)
-						),	
+						),
 						array(
 							 "type"=>"tab",
 							 "name"=>"Blog + Search + Archive options",
 							 "options"=>array(
 										array(
-											
+
 											"type"=>"radio",
 											"name"=>"Layout for blog page",
 											"description"=>"Choose the layout for the blog page, the archive page and the search page",
@@ -706,13 +707,13 @@
 											"default"=>"show"
 										)
 							)
-						),	
+						),
 						array(
 							 "type"=>"tab",
 							 "name"=>"Single post options",
 							 "options"=>array(
 										array(
-											
+
 											"type"=>"radio",
 											"name"=>"Layout for single post",
 											"description"=>"Choose the layout for the single post",
@@ -795,7 +796,7 @@
 						array(
 							 "type"=>"tab",
 							 "name"=>"Footer options",
-							 "options"=>array(		
+							 "options"=>array(
 										array(
 											"type"=>"select",
 											"name"=>"Footer columns",
@@ -808,40 +809,40 @@
 											"default"=>"doi"
 										),
 										array(
-									
+
 											"type"=>"image",
 											"name"=>"Logo",
 											"description"=>"",
 											"id"=>"logo_footer",
-											"default"=>"" 
+											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Logo footer text",
+											"name"=>"Adress",
 											"description"=>"",
-											"id"=>"logo_footer_text",
-											"default"=>""
+											"id"=>"address",
+											"default"=>"Bucharest, Unirii 23, Romania"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Twitter Link",
 											"description"=>"Enter your twitter account link. If you leave this blank the twitter link in the footer wont be displayed",
 											"id"=>"twitter",
-											"default"=>""
+											"default"=>"#"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"RSS link",
 											"description"=>"Enter your RSS link. If you leave this blank the RSS link in the footer wont be displayed",
 											"id"=>"rss",
-											"default"=>""
+											"default"=>"#"
 										),
 										array(
 											"type"=>"input_text",
 											"name"=>"Linkedin Link",
 											"description"=>"Enter your Linkedin link. If you leave this blank the linkedin link in the footer wont be displayed",
 											"id"=>"linkedin",
-											"default"=>""
+											"default"=>"#"
 										),
 										array(
 											"type"=>"input_text",
@@ -855,27 +856,27 @@
 						array(
 							 "type"=>"tab",
 							 "name"=>"Contact options",
-							 "options"=>array(	
-								
+							 "options"=>array(
+
 								array(
 									"type"=>"input_text",
 									"name"=>"Email address",
 									"description"=>"Enter your email address to appear in footer and contact page.If you leave this blank the email address and the contact form wont be displayed",
 									"id"=>"email",
-									"default"=>"test@yahoo.com"
+									"default"=>"support@themeisle.com"
 								),
 								array(
 									"type"=>"input_text",
 									"name"=>"Phone number",
 									"description"=>"Enter your phone number to appear in footer and contact page.If you leave this blank the phone number wont be displayed",
 									"id"=>"phone",
-									"default"=>""
+									"default"=>"0043 889 778 321"
 								)
 							)
 						)
-			
-					); 
-			 
-		}	 
-	
-	} 
+
+					);
+
+		}
+
+	}
