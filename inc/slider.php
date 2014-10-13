@@ -1,10 +1,10 @@
 <?php
-	$slide_image1 = foliogine_lite('slide_image1');
-	$slide_image2 = foliogine_lite('slide_image2');
-	$slide_image3 = foliogine_lite('slide_image3');
-	$slider_bigtitle = foliogine_lite('slider_bigtitle');
-	$slider_title = foliogine_lite('slider_title');
-	$slider_subtitle = foliogine_lite('slider_subtitle');
+	$foliogine_lite_slide_image1 = foliogine_lite('slide_image1');
+	$foliogine_lite_slide_image2 = foliogine_lite('slide_image2');
+	$foliogine_lite_slide_image3 = foliogine_lite('slide_image3');
+	$foliogine_lite_slider_bigtitle = foliogine_lite('slider_bigtitle');
+	$foliogine_lite_slider_title = foliogine_lite('slider_title');
+	$foliogine_lite_slider_subtitle = foliogine_lite('slider_subtitle');
 ?>
             <section class="slider">
 				<div class="container">
@@ -16,8 +16,8 @@
 							<div class="carousel-inner">
 								<div class="item active">
 									<?php
-										if (isset($slide_image1) && $slide_image1 != '') :
-											echo '<img src="'.$slide_image1.'" alt="'.get_bloginfo('name').'">';
+										if (isset($foliogine_lite_slide_image1) && $foliogine_lite_slide_image1 != '') :
+											echo '<img src="'.esc_url($foliogine_lite_slide_image1).'" alt="'.esc_attr(get_bloginfo('name')).'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/image-on-screen-colors.jpg" alt="'.get_bloginfo('name').'">';
 										endif;
@@ -25,8 +25,8 @@
 								</div>
 								<div class="item">
 									<?php
-										if (isset($slide_image2) && $slide_image2 != '') :
-											echo '<img src="'.$slide_image2.'" alt="'.get_bloginfo('name').'">';
+										if (isset($foliogine_lite_slide_image2) && $foliogine_lite_slide_image2 != '') :
+											echo '<img src="'.esc_url($foliogine_lite_slide_image2).'" alt="'.get_bloginfo('name').'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/img-on-screen-mobile-tablet.jpg" alt="'.get_bloginfo('name').'">';
 										endif;
@@ -34,8 +34,8 @@
 								</div>
 								<div class="item">
 									<?php
-										if (isset($slide_image3) && $slide_image3 != '') :
-											echo '<img src="'.$slide_image3.'" alt="'.get_bloginfo('name').'">';
+										if (isset($foliogine_lite_slide_image3) && $foliogine_lite_slide_image3 != '') :
+											echo '<img src="'.esc_url($foliogine_lite_slide_image3).'" alt="'.get_bloginfo('name').'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/img-on-screen.jpg" alt="'.get_bloginfo('name').'">';
 										endif;
@@ -47,34 +47,34 @@
 					</div>
 					<?php
 						//default options
-						if ((!isset($slider_bigtitle) || $slider_bigtitle == '')
-							&& (!isset($slider_title) || $slider_title == '')
-							&& (!isset($slider_subtitle) || $slider_subtitle == '')):
+						if ((!isset($foliogine_lite_slider_bigtitle) || $foliogine_lite_slider_bigtitle == '')
+							&& (!isset($foliogine_lite_slider_title) || $foliogine_lite_slider_title == '')
+							&& (!isset($foliogine_lite_slider_subtitle) || $foliogine_lite_slider_subtitle == '')):
 					?>
-							<div class="welcome-text"><?php _e('Hello and welcome, we are ThemeIsle, browse our portfolio.','foliogine'); ?></div>
+							<div class="welcome-text"><?php _e('Hello and welcome, we are ThemeIsle, browse our portfolio.','foliogine_lite'); ?></div>
 							<div class="ribbon hidden-phone">
 								<div class="arrow arrow-left"></div>
 								<div class="arrow arrow-right"></div>
-								<div class="text"><?php _e('Professional WordPress theme','foliogine'); ?></div>
-								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','foliogine'); ?></div>
+								<div class="text"><?php _e('Professional WordPress theme','foliogine_lite'); ?></div>
+								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','foliogine_lite'); ?></div>
 							</div>
 					<?php
 						else:
 
-							if (isset($slider_bigtitle) && $slider_bigtitle != ''):
-								echo '<div class="welcome-text">'.htmlentities($slider_bigtitle).'</div>';
+							if (isset($foliogine_lite_slider_bigtitle) && $foliogine_lite_slider_bigtitle != ''):
+								echo '<div class="welcome-text">'.esc_html($foliogine_lite_slider_bigtitle).'</div>';
 							endif;
-							if ((isset($slider_title) && $slider_title != '') || (isset($slider_subtitle) && $slider_subtitle != '')):
+							if ((isset($foliogine_lite_slider_title) && $foliogine_lite_slider_title != '') || (isset($foliogine_lite_slider_subtitle) && $foliogine_lite_slider_subtitle != '')):
 						?>
 								<div class="ribbon hidden-phone">
 									<div class="arrow arrow-left"></div>
 									<div class="arrow arrow-right"></div>
 									<?php
-										if (isset($slider_title) && $slider_title != ''):
-											echo '<div class="text">'.htmlentities($slider_title).'</div>';
+										if (isset($foliogine_lite_slider_title) && $foliogine_lite_slider_title != ''):
+											echo '<div class="text">'.esc_html($foliogine_lite_slider_title).'</div>';
 										endif;
-										if (isset($slider_subtitle) && $slider_subtitle != ''):
-											echo '<div class="text-yellow hidden-tablet hidden-phone">'.htmlentities($slider_subtitle).'</div>';
+										if (isset($foliogine_lite_slider_subtitle) && $foliogine_lite_slider_subtitle != ''):
+											echo '<div class="text-yellow hidden-tablet hidden-phone">'.esc_html($foliogine_lite_slider_subtitle).'</div>';
 										endif;
 									?>
 								</div>

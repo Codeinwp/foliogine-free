@@ -7,7 +7,7 @@
  * handled by a callback to themeisle_theme_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package foliogine
+ * @package foliogine_lite
  */
 
 /*
@@ -28,9 +28,9 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<!--<nav id="comment-nav-above" class="navigation-comment" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine_lite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine_lite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine_lite' ) ); ?></div>
 		</nav> -->
 		<?php endif; // check for comment navigation ?>
 
@@ -54,9 +54,9 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<!--<nav id="comment-nav-below" class="navigation-comment" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine_lite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine_lite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine_lite' ) ); ?></div>
 		</nav> -->
 		<?php endif; // check for comment navigation ?>
 
@@ -66,11 +66,11 @@ if ( post_password_required() )
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'foliogine' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'foliogine_lite' ); ?></p>
 	<?php endif; ?>
 
 	<?php
-	$comments_args = array(
+	$foliogine_lite_comments_args = array(
             // change the title of send button
             'label_submit'=>'Submit',
             'comment_notes_before' => '',
@@ -80,13 +80,13 @@ if ( post_password_required() )
             'comment_field' => '<textarea id="comment" name="comment"></textarea>',
 
             'fields' => array(
-            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'foliogine' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
-            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'foliogine' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
-            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'foliogine' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
+            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'foliogine_lite' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
+            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'foliogine_lite' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
+            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'foliogine_lite' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
         ),
     );
 
-	comment_form($comments_args);
+	comment_form($foliogine_lite_comments_args);
 	?>
 
 </div><!-- #comments -->

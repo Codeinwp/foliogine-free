@@ -818,7 +818,7 @@
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Adress",
+											"name"=>"Address",
 											"description"=>"",
 											"id"=>"address",
 											"default"=>"Bucharest, Unirii 23, Romania"

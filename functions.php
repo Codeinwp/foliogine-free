@@ -1,5 +1,7 @@
 <?php
+
 function foliogine_lite_theme_setup() {
+
     global $content_width;
 	require( get_template_directory() . '/admin/functions.php' );
 
@@ -33,9 +35,9 @@ function foliogine_lite_theme_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on foliogine lite theme, use a find and replace
-	 * to change 'foliogine' to the name of your theme in all the template files
+	 * to change 'foliogine_lite' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'foliogine', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'foliogine_lite', get_template_directory() . '/languages' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -47,7 +49,7 @@ function foliogine_lite_theme_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
     register_nav_menus( array(
-            'top_menu' => __( 'Top menu', 'foliogine' ),
+            'top_menu' => __( 'Top menu', 'foliogine_lite' ),
     ) );
     $args = array(
             'default-color' => 'ffffff',
@@ -73,7 +75,7 @@ add_action( 'after_setup_theme', 'foliogine_lite_theme_setup' );
  */
 function foliogine_lite_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'foliogine' ),
+		'name'          => __( 'Sidebar', 'foliogine_lite' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -88,9 +90,11 @@ add_action( 'widgets_init', 'foliogine_lite_widgets_init' );
  */
 function foliogine_lite_scripts() {
 
-	wp_enqueue_style( 'foliogine_lite-style', get_stylesheet_uri() );
-
-	wp_enqueue_script('jquery');
+	wp_enqueue_style( 'foliogine_lite-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css' );
+	
+	wp_enqueue_style( 'foliogine_lite-bootstrap-responsive-css', get_template_directory_uri() . '/css/bootstrap-responsive.css' );
+	
+	wp_enqueue_style( 'foliogine_lite-style', get_template_directory_uri() . '/css/styles.css', array('foliogine_lite-bootstrap-css','foliogine_lite-bootstrap-responsive-css') );
 
     wp_enqueue_script( 'sharrre', get_template_directory_uri() . '/js/jquery.sharrre-1.3.4.js', array("jquery"), '20120206', true );
 
@@ -115,8 +119,7 @@ function foliogine_lite_scripts() {
 
 
 
-	wp_register_style( 'php-style', get_template_directory_uri() . '/css/style.php');
-    wp_enqueue_style( 'php-style' );
+	wp_enqueue_style( 'php-style', get_template_directory_uri() . '/css/style.php');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -128,8 +131,7 @@ function foliogine_lite_scripts() {
 
 	if (current_user_can( 'manage_options' )) {
 
-        wp_register_style('foliogine_lite_admin_css', get_template_directory_uri() . '/css/admin.css', array(), '1.0', 'all');
-        wp_enqueue_style('foliogine_lite_admin_css');
+        wp_enqueue_style('foliogine_lite_admin_css', get_template_directory_uri() . '/css/admin.css', array(), '1.0', 'all');
 
     }
 }
@@ -156,7 +158,7 @@ function foliogine_lite_comment($comment, $args, $depth) {
                 <p>By <span><?php comment_author($cid); ?></span> on <?php echo get_comment_date('F d, Y'); ?></p>
                 <p><?php comment_text() ?></p>
                 <?php if ($comment->comment_approved == '0') : ?>
-                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','foliogine') ?></em>
+                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','foliogine_lite') ?></em>
                         <br />
                 <?php endif; ?>
                 <div class="reply">
@@ -168,58 +170,17 @@ function foliogine_lite_comment($comment, $args, $depth) {
 
 }
 
-// function to display number of posts.
-function foliogine_lite_getPostViews($postID){
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if ($count==''){
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-        return "0";
-    }
-    return $count;
-}
-
-// function to count views.
-function foliogine_lite_setPostViews($postID) {
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if ($count==''){
-        $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-    }else{
-        $count++;
-        update_post_meta($postID, $count_key, $count);
-    }
-}
-
-
-// Add it to a column in WP-Admin
-add_filter('manage_posts_columns', 'foliogine_lite_posts_column_views');
-add_action('manage_posts_custom_column', 'foliogine_lite_posts_custom_column_views',5,2);
-function foliogine_lite_posts_column_views($defaults){
-    $defaults['post_views'] = __('Views','foliogine');
-    return $defaults;
-}
-function foliogine_lite_posts_custom_column_views($column_name, $id){
-	if ($column_name === 'post_views'){
-        echo foliogine_lite_getPostViews(get_the_ID());
-    }
-}
-
 function foliogine_lite_add_editor_styles() {
     add_editor_style( '/css/custom-editor-style.css' );
 }
-add_action( 'init', 'foliogine_lite_add_editor_styles' );
+add_action( 'after_setup_theme', 'foliogine_lite_add_editor_styles' );
 
 add_filter( 'the_title', 'foliogine_lite_default_title' );
 
 function foliogine_lite_default_title( $title ) {
 
 	if ($title == '')
-		$title = "Default title";
+		$title = __("Default title",'foliogine_lite');
 
 	return $title;
 }
-

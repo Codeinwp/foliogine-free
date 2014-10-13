@@ -1,10 +1,6 @@
 <?php
 
-if (!defined('ABSPATH')) {
-	die('Error.');
-}
-
-include_once ABSPATH . "wp-load.php";
+include_once "../../../../wp-load.php";
 
 header("Content-type: text/css");
 
