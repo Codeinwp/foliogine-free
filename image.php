@@ -3,7 +3,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 
 get_header();
@@ -27,7 +27,7 @@ get_header();
 						<?php
 
 							$foliogine_lite_metadata = wp_get_attachment_metadata();
-							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$foliogine_lite_s">%2$foliogine_lite_s</time></span> at <a href="%3$foliogine_lite_s" title="Link to full-size image">%4$foliogine_lite_s &times; %5$foliogine_lite_s</a> in <a href="%6$foliogine_lite_s" title="Return to %7$foliogine_lite_s" rel="gallery">%8$foliogine_lite_s</a>', 'foliogine_lite' ),
+							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$foliogine_lite_s">%2$foliogine_lite_s</time></span> at <a href="%3$foliogine_lite_s" title="Link to full-size image">%4$foliogine_lite_s &times; %5$foliogine_lite_s</a> in <a href="%6$foliogine_lite_s" title="Return to %7$foliogine_lite_s" rel="gallery">%8$foliogine_lite_s</a>', 'foliogine-lite' ),
 								esc_attr( get_the_date( 'c' ) ),
 								esc_html( get_the_date() ),
 								wp_get_attachment_url(),
@@ -38,15 +38,15 @@ get_header();
 								get_the_title( $foliogine_lite_post->post_parent )
 							);
 						?>
-						<?php edit_post_link( __( 'Edit', 'foliogine_lite' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'foliogine-lite' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
 					<nav role="navigation" id="image-navigation" class="navigation-image">
 
 
-						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'foliogine_lite' ) ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'foliogine-lite' ) ); ?></div>
 
 
-						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'foliogine_lite' ) ); ?></div>
+						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'foliogine-lite' ) ); ?></div>
 
 
 					</nav><!-- #image-navigation -->
@@ -126,7 +126,7 @@ get_header();
 
 					<?php
 						wp_link_pages( array(
-							'before' => '<div class="page-links">' . __( 'Pages:', 'foliogine_lite' ),
+							'before' => '<div class="page-links">' . __( 'Pages:', 'foliogine-lite' ),
 							'after'  => '</div>',
 						) );
 					?>
@@ -139,31 +139,31 @@ get_header();
 					<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
 
 
-						<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'foliogine_lite' ), get_trackback_url() ); ?>
+						<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'foliogine-lite' ), get_trackback_url() ); ?>
 
 
 					<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
 
 
-						<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'foliogine_lite' ), get_trackback_url() ); ?>
+						<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'foliogine-lite' ), get_trackback_url() ); ?>
 
 
 					<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
 
 
-						<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'foliogine_lite' ); ?>
+						<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'foliogine-lite' ); ?>
 
 
 					<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
 
 
-						<?php _e( 'Both comments and trackbacks are currently closed.', 'foliogine_lite' ); ?>
+						<?php _e( 'Both comments and trackbacks are currently closed.', 'foliogine-lite' ); ?>
 
 
 					<?php endif; ?>
 
 
-					<?php edit_post_link( __( 'Edit', 'foliogine_lite' ), ' <span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'foliogine-lite' ), ' <span class="edit-link">', '</span>' ); ?>
 
 
 				</footer><!-- .entry-meta -->

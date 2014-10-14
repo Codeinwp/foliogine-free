@@ -2,6 +2,7 @@
 
 include_once "../../../../wp-load.php";
 
+
 header("Content-type: text/css");
 
 $layout_blog = foliogine_lite('layout_blog');

@@ -20,7 +20,7 @@
 			<div class="container">
 
 				<div class="content">
-					<h2><?php _e('OUR SERVICES','foliogine'); ?></h2>
+					<h2><?php _e('OUR SERVICES','foliogine-lite'); ?></h2>
 
 					<a href="#" title="" class="box-service">
 						<?php if (isset($foliogine_lite_services_image1) && $foliogine_lite_services_image1 != '') : ?>

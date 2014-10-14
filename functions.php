@@ -4,6 +4,7 @@ function foliogine_lite_theme_setup() {
 
     global $content_width;
 	require( get_template_directory() . '/admin/functions.php' );
+	
 
     /**
      * Set the content width based on the theme's design and stylesheet.
@@ -35,9 +36,9 @@ function foliogine_lite_theme_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on foliogine lite theme, use a find and replace
-	 * to change 'foliogine_lite' to the name of your theme in all the template files
+	 * to change 'foliogine-lite' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'foliogine_lite', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'foliogine-lite', get_template_directory() . '/languages' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -49,7 +50,7 @@ function foliogine_lite_theme_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
     register_nav_menus( array(
-            'top_menu' => __( 'Top menu', 'foliogine_lite' ),
+            'top_menu' => __( 'Top menu', 'foliogine-lite' ),
     ) );
     $args = array(
             'default-color' => 'ffffff',
@@ -75,7 +76,7 @@ add_action( 'after_setup_theme', 'foliogine_lite_theme_setup' );
  */
 function foliogine_lite_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'foliogine_lite' ),
+		'name'          => __( 'Sidebar', 'foliogine-lite' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -96,30 +97,29 @@ function foliogine_lite_scripts() {
 	
 	wp_enqueue_style( 'foliogine_lite-style', get_template_directory_uri() . '/css/styles.css', array('foliogine_lite-bootstrap-css','foliogine_lite-bootstrap-responsive-css') );
 
-    wp_enqueue_script( 'sharrre', get_template_directory_uri() . '/js/jquery.sharrre-1.3.4.js', array("jquery"), '20120206', true );
+    wp_enqueue_script( 'foliogine_lite-sharrre', get_template_directory_uri() . '/js/jquery.sharrre-1.3.4.js', array("jquery"), '20120206', true );
 
-	wp_enqueue_script( 'jqcycle', get_template_directory_uri() . '/js/jqcycle.min.js', array(), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-jqcycle', get_template_directory_uri() . '/js/jqcycle.min.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'foliogine_lite-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array("jquery"), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array("jquery"), '20120206', true );
 
-    wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array("jquery"), '20120206', true );
+    wp_enqueue_script( 'foliogine_lite-tabs', get_template_directory_uri() . '/js/tabs.js', array("jquery"), '20120206', true );
 
-	wp_enqueue_script( 'tinynav', get_template_directory_uri() . '/js/tinynav.min.js', array("jquery"), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-tinynav', get_template_directory_uri() . '/js/tinynav.min.js', array("jquery"), '20120206', true );
 
-	wp_enqueue_script( 'customscript', get_template_directory_uri() . '/js/customscript.js', array("jquery","jqcycle","sharrre","tinynav"), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-customscript', get_template_directory_uri() . '/js/customscript.js', array("jquery","foliogine_lite-jqcycle","foliogine_lite-sharrre","foliogine_lite-tinynav"), '20120206', true );
 
-	wp_enqueue_script( 'retina', get_template_directory_uri() . '/js/retina.js', array("jquery"), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-retina', get_template_directory_uri() . '/js/retina.js', array("jquery"), '20120206', true );
 
-	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array("jquery"), '20120206', true );
+	wp_enqueue_script( 'foliogine_lite-slider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array("jquery"), '20120206', true );
 
-	wp_enqueue_script( 'skills', get_template_directory_uri() . '/js/jquery.donutchart.js', array("jquery"), '20120206', true );
-
-
+	wp_enqueue_script( 'foliogine_lite-skills', get_template_directory_uri() . '/js/jquery.donutchart.js', array("jquery"), '20120206', true );
 
 
-	wp_enqueue_style( 'php-style', get_template_directory_uri() . '/css/style.php');
+	
+	wp_enqueue_style( 'foliogine_lite-php-style', get_template_directory_uri() . '/css/style.php');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -158,7 +158,7 @@ function foliogine_lite_comment($comment, $args, $depth) {
                 <p>By <span><?php comment_author($cid); ?></span> on <?php echo get_comment_date('F d, Y'); ?></p>
                 <p><?php comment_text() ?></p>
                 <?php if ($comment->comment_approved == '0') : ?>
-                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','foliogine_lite') ?></em>
+                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','foliogine-lite') ?></em>
                         <br />
                 <?php endif; ?>
                 <div class="reply">
@@ -180,7 +180,7 @@ add_filter( 'the_title', 'foliogine_lite_default_title' );
 function foliogine_lite_default_title( $title ) {
 
 	if ($title == '')
-		$title = __("Default title",'foliogine_lite');
+		$title = __("Default title",'foliogine-lite');
 
 	return $title;
 }

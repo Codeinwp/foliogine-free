@@ -3,7 +3,7 @@
 /*
  * The Sidebar containing the main widget areas.
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 
 if ( is_active_sidebar('sidebar-1') ):
@@ -16,7 +16,7 @@ else:
 
 						<div class="widget">
 
-							<p class="title"><?php _e('Recent posts','foliogine_lite'); ?></p>
+							<p class="title"><?php _e('Recent posts','foliogine-lite'); ?></p>
 
 							<?php
 
@@ -54,7 +54,7 @@ else:
 
 						<div class="widget">
 
-							<p class="title"><?php _e('Recent comments','foliogine_lite'); ?></p>
+							<p class="title"><?php _e('Recent comments','foliogine-lite'); ?></p>
 
 							<?php
 
@@ -79,7 +79,7 @@ else:
 						</div><!-- .widget -->
 						<div class="widget archives">
 
-							<p class="title"><?php _e('Archive','foliogine_lite'); ?></p>
+							<p class="title"><?php _e('Archive','foliogine-lite'); ?></p>
 
 							<?php
 

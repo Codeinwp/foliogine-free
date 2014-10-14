@@ -5,7 +5,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 
 ?>
@@ -14,7 +14,7 @@
 
 	<header class="entry-header">
 
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'foliogine_lite' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'foliogine-lite' ); ?></h1>
 
 	</header><!-- .entry-header -->
 
@@ -23,18 +23,18 @@
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$foliogine_lite_s">Get started here</a>.', 'foliogine_lite' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$foliogine_lite_s">Get started here</a>.', 'foliogine-lite' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'foliogine_lite' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'foliogine-lite' ); ?></p>
 
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'foliogine_lite' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'foliogine-lite' ); ?></p>
 
 			<?php get_search_form(); ?>
 

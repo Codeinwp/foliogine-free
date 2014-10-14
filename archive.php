@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 ?>
 <?php get_header(); ?>
@@ -21,46 +21,46 @@
 		<h1>
 			<?php
 			if ( is_category() ) :
-				printf( __( 'Category Archives: %s', 'foliogine_lite' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+				printf( __( 'Category Archives: %s', 'foliogine-lite' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 			elseif ( is_tag() ) :
-				printf( __( 'Tag Archives: %s', 'foliogine_lite' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+				printf( __( 'Tag Archives: %s', 'foliogine-lite' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 			elseif ( is_author() ) :
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author Archives: %s', 'foliogine_lite' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author Archives: %s', 'foliogine-lite' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
 							 */
 							rewind_posts();
 			elseif ( is_day() ) :
-				printf( __( 'Daily Archives: %s', 'foliogine_lite' ), '<span>' . get_the_date() . '</span>' );
+				printf( __( 'Daily Archives: %s', 'foliogine-lite' ), '<span>' . get_the_date() . '</span>' );
 
 			elseif ( is_month() ) :
-				printf( __( 'Monthly Archives: %s', 'foliogine_lite' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+				printf( __( 'Monthly Archives: %s', 'foliogine-lite' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 			elseif ( is_year() ) :
-				printf( __( 'Yearly Archives: %s', 'foliogine_lite' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+				printf( __( 'Yearly Archives: %s', 'foliogine-lite' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 			elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-				_e( 'Asides', 'foliogine_lite' );
+				_e( 'Asides', 'foliogine-lite' );
 
 			elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-				_e( 'Images', 'foliogine_lite');
+				_e( 'Images', 'foliogine-lite');
 
 			elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-				_e( 'Videos', 'foliogine_lite' );
+				_e( 'Videos', 'foliogine-lite' );
 
 			elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-				_e( 'Quotes', 'foliogine_lite' );
+				_e( 'Quotes', 'foliogine-lite' );
 
 			elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-				_e( 'Links', 'foliogine_lite' );
+				_e( 'Links', 'foliogine-lite' );
 
 			else :
-				_e( 'Archives', 'foliogine_lite' );
+				_e( 'Archives', 'foliogine-lite' );
 
 			endif;
 			?>
@@ -84,14 +84,14 @@
 					}
 					if (isset($foliogine_the_author) && $foliogine_the_author == 'show') {
 						$author = get_the_author();
-						echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine_lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+						echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
 					if (isset($foliogine_the_category) && $foliogine_the_category == 'show') {
-						echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine_lite').'</span>';
+						echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 						$category = get_the_category();
 						$cats = get_the_category($post->ID);
 						if (!empty($cats)) {
-							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine_lite').'</span>';
+							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 							foreach($cats as $c) {
 								echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
 							}
@@ -99,7 +99,7 @@
 						}
 					}
 					if (isset($foliogine_tags) && $foliogine_tags == 'show' && has_tag()) {
-						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine_lite').'</span>';
+						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine-lite').'</span>';
 						the_tags('');
 						echo '</p>';
 					}
@@ -123,15 +123,15 @@
 						<?php
 							if (isset($foliogine_the_author) && $foliogine_the_author == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted by ','foliogine_lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+								echo '<p><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
 							if (isset($foliogine_the_category) && $foliogine_the_category == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted in ','foliogine_lite').'</span>';
+								echo '<p><span>'.__('Posted in ','foliogine-lite').'</span>';
 								$category = get_the_category();
 								$cats = get_the_category($post->ID);
 								if (!empty($cats)) {
-									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine_lite').'</span>';
+									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 									foreach($cats as $c) {
 										echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
 									}
@@ -139,18 +139,18 @@
 								}
 							}
 							if (isset($foliogine_tags) && $foliogine_tags == 'show' && has_tag()) {
-									echo '<p><span>'.__('Tagged with ','foliogine_lite').'</span>';
+									echo '<p><span>'.__('Tagged with ','foliogine-lite').'</span>';
 									the_tags('');
 									echo '</p>';
 							}
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','foliogine_lite'); ?>" class="continue"><?php _e('Continue reading','foliogine_lite'); ?> ></a>
+							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','foliogine-lite'); ?>" class="continue"><?php _e('Continue reading','foliogine-lite'); ?> ></a>
                             <?php
                                   if (isset($foliogine_lite_comments) && $foliogine_lite_comments == 'show') {
                             ?>
-							<a class="icons comm" title="<?php _e('Comments','foliogine_lite'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
+							<a class="icons comm" title="<?php _e('Comments','foliogine-lite'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
 							<?php } ?>
 							
 						</p><!-- .bottom-line -->
@@ -166,8 +166,8 @@
 			<div class="pagination-wrap">
 
 				<p class="right">
-					<?php previous_posts_link( __( 'Prev', 'foliogine_lite' ) ); ?>
-					<?php next_posts_link( __( 'Next', 'foliogine_lite' ) ); ?>
+					<?php previous_posts_link( __( 'Prev', 'foliogine-lite' ) ); ?>
+					<?php next_posts_link( __( 'Next', 'foliogine-lite' ) ); ?>
 				</p>
 
 			</div><!-- /pagination-->

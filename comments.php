@@ -7,7 +7,7 @@
  * handled by a callback to themeisle_theme_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 
 /*
@@ -24,13 +24,13 @@ if ( post_password_required() )
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-        <div class="title"><span>|| Comments</span></div>
+        <div class="title"><span>|| <?php _e('Comments','foliogine-lite'); ?></span></div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<!--<nav id="comment-nav-above" class="navigation-comment" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine_lite' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine_lite' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine_lite' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine-lite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine-lite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine-lite' ) ); ?></div>
 		</nav> -->
 		<?php endif; // check for comment navigation ?>
 
@@ -54,9 +54,9 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<!--<nav id="comment-nav-below" class="navigation-comment" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine_lite' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine_lite' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine_lite' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foliogine-lite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foliogine-lite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foliogine-lite' ) ); ?></div>
 		</nav> -->
 		<?php endif; // check for comment navigation ?>
 
@@ -66,7 +66,7 @@ if ( post_password_required() )
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'foliogine_lite' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'foliogine-lite' ); ?></p>
 	<?php endif; ?>
 
 	<?php
@@ -80,9 +80,9 @@ if ( post_password_required() )
             'comment_field' => '<textarea id="comment" name="comment"></textarea>',
 
             'fields' => array(
-            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'foliogine_lite' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
-            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'foliogine_lite' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
-            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'foliogine_lite' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
+            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'foliogine-lite' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
+            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'foliogine-lite' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
+            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'foliogine-lite' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
         ),
     );
 

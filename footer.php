@@ -5,7 +5,7 @@
 *
 * Contains the closing of the id=main div and all content after
 *
-* @package foliogine_lite
+* @package foliogine-lite
 */
 ?>
 <?php
@@ -47,11 +47,11 @@
 					<p class="text">
 						<?php
 							if (isset($foliogine_lite_phone) && $foliogine_lite_phone != '')
-								echo __('Phone:','foliogine_lite').esc_html($foliogine_lite_phone).'</br>';
+								echo __('Phone:','foliogine-lite').esc_html($foliogine_lite_phone).'</br>';
 						?>
 						<?php
 							if (isset($foliogine_lite_email) && $foliogine_lite_email != '')
-								echo __('Email:','foliogine_lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
+								echo __('Email:','foliogine-lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
 						?>
 					</p>
 				</div>
@@ -83,12 +83,12 @@
 					<p class="text">
 					<?php
 						if (isset($foliogine_lite_phone) && $foliogine_lite_phone != '') {
-							echo __('Phone:','foliogine_lite').esc_html($foliogine_lite_phone).'<br />';
+							echo __('Phone:','foliogine-lite').esc_html($foliogine_lite_phone).'<br />';
 						}
 					?>
 					<?php
 						if (isset($foliogine_lite_email) && $foliogine_lite_email != '')
-							echo __('Email:','foliogine_lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
+							echo __('Email:','foliogine-lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
 					?>
 					</p>
 				</div>
@@ -111,7 +111,7 @@
 			<?php		if (isset($foliogine_lite_copyright) && $foliogine_lite_copyright != ''):
 							echo '<p>'.esc_html($foliogine_lite_copyright).'</p>';
 						else: ?>
-							<p>Foliogine Lite &copy; <?php echo date('Y'); ?> <br><?php _e('All rights reserved.','foliogine_lite'); ?></p>
+							<p>Foliogine Lite &copy; <?php echo date('Y'); ?> <br><?php _e('All rights reserved.','foliogine-lite'); ?></p>
 						<?php	endif;?>
 	</div>
 	</div>

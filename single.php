@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 ?>
 <?php get_header(); ?>
@@ -38,14 +38,14 @@
 						}
 						if (isset($foliogine_lite_author_single) && $foliogine_lite_author_single == 'show') {
 							$foliogine_lite_author = get_the_author();
-							echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine_lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
+							echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
 						}
 						if (isset($foliogine_lite_category_single) && $foliogine_lite_category_single == 'show') {
 
 							$foliogine_lite_category = get_the_category();
 							$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
 							if (!empty($foliogine_lite_cats)) {
-								echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine_lite').'</span>';
+								echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 								foreach($foliogine_lite_cats as $foliogine_lite_c) {
 									echo '<a href="'.get_category_link($foliogine_lite_c->cat_ID).'">'.$foliogine_lite_c->cat_name.'</a> ';
 								}
@@ -53,7 +53,7 @@
 							}
 						}
 						if (isset($foliogine_lite_tags_single) && $foliogine_lite_tags_single == 'show' && has_tag()) {
-							echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine_lite').'</span>';
+							echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine-lite').'</span>';
 						    the_tags('');
 							echo '</p>';
 						} ?>
@@ -78,13 +78,13 @@
 					<?php
 					if (isset($foliogine_lite_author_single) && $foliogine_lite_author_single == 'show') {
 						$foliogine_lite_author = get_the_author();
-						echo '<p><span>'.__('Posted by ','foliogine_lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
+						echo '<p><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
 					}
 					if (isset($foliogine_lite_category_single) && $foliogine_lite_category_single == 'show') {
 						$foliogine_lite_category = get_the_category();
 						$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
 						if (!empty($foliogine_lite_cats)) {
-							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine_lite').'</span>';
+							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 							foreach($foliogine_lite_cats as $foliogine_lite_c) {
 								echo '<a href="'.get_category_link($foliogine_lite_c->cat_ID).'">'.$foliogine_lite_c->cat_name.'</a> ';
 							}
@@ -92,7 +92,7 @@
 						}
 					}
 					if (isset($foliogine_lite_tags_single) && $foliogine_lite_tags_single == 'show' && has_tag()) {
-						echo '<p><span>'.__('Tagged with ','foliogine_lite').'</span>';
+						echo '<p><span>'.__('Tagged with ','foliogine-lite').'</span>';
 						the_tags('');
 						echo '</p>';
 					}
@@ -100,11 +100,11 @@
 				</div><!-- .post-info-phone -->
 			<div>
 				<p class="bottom-line">
-					<a href="#" title="<?php _e('Continue reading','foliogine_lite'); ?>" class="continue scrollup"><?php _e('Back to top','foliogine_lite'); ?> ></a>
+					<a href="#" title="<?php _e('Continue reading','foliogine-lite'); ?>" class="continue scrollup"><?php _e('Back to top','foliogine-lite'); ?> ></a>
                     <?php
                         if (isset($foliogine_lite_comments) && $foliogine_lite_comments == 'show') {
                     ?>
-					<a href="#" class="icons comm" title="<?php _e('Comments','foliogine_lite'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
+					<a href="#" class="icons comm" title="<?php _e('Comments','foliogine-lite'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
                         <?php } ?>
 				</p>
 			</div>

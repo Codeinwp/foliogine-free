@@ -1,7 +1,7 @@
 <?php
 /*
  * The template for displaying the front page.
- * @package foliogine_lite
+ * @package foliogine-lite
  */
 
 get_header();

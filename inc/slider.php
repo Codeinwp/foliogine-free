@@ -51,12 +51,12 @@
 							&& (!isset($foliogine_lite_slider_title) || $foliogine_lite_slider_title == '')
 							&& (!isset($foliogine_lite_slider_subtitle) || $foliogine_lite_slider_subtitle == '')):
 					?>
-							<div class="welcome-text"><?php _e('Hello and welcome, we are ThemeIsle, browse our portfolio.','foliogine_lite'); ?></div>
+							<div class="welcome-text"><?php _e('Hello and welcome, we are ThemeIsle, browse our portfolio.','foliogine-lite'); ?></div>
 							<div class="ribbon hidden-phone">
 								<div class="arrow arrow-left"></div>
 								<div class="arrow arrow-right"></div>
-								<div class="text"><?php _e('Professional WordPress theme','foliogine_lite'); ?></div>
-								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','foliogine_lite'); ?></div>
+								<div class="text"><?php _e('Professional WordPress theme','foliogine-lite'); ?></div>
+								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','foliogine-lite'); ?></div>
 							</div>
 					<?php
 						else:
