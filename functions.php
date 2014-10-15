@@ -117,10 +117,6 @@ function foliogine_lite_scripts() {
 
 	wp_enqueue_script( 'foliogine_lite-skills', get_template_directory_uri() . '/js/jquery.donutchart.js', array("jquery"), '20120206', true );
 
-
-	
-	wp_enqueue_style( 'foliogine_lite-php-style', get_template_directory_uri() . '/css/style.php');
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -183,4 +179,101 @@ function foliogine_lite_default_title( $title ) {
 		$title = __("Default title",'foliogine-lite');
 
 	return $title;
+}
+
+add_action('wp_print_scripts','foliogine_lite_php_style');
+
+function foliogine_lite_php_style() {
+	?>
+	<style type="text/css">
+		<?php
+			$layout_blog = foliogine_lite('layout_blog');
+			$layout_single = foliogine_lite('layout_single');
+			$address_map = foliogine_lite('address_map');
+
+			if (isset($layout_blog) && ($layout_blog == 'valoare1')) {
+			?>
+
+				body.search .sidebar, body.blog .sidebar, body.archive .sidebar {
+					display:none !important;
+				}
+
+				body.search section.bloglist .left, body.blog section.bloglist .left, body.archive section.bloglist .left {
+					width:100% !important;
+				}
+			<?php
+			}
+
+			else if (isset($layout_blog) && ($layout_blog == 'valoare2')) {
+			?>
+
+				body.search .list-post-info, body.blog .list-post-info, body.archive .list-post-info   {
+					display:none !important;
+				}
+
+				body.search .list-post-content, body.blog .list-post-content, body.archive .list-post-content {
+					width:100% !important;
+				}
+
+			<?php
+
+			}
+
+
+			if (isset($layout_single) && ($layout_single == 'valoare1')) {
+			?>
+
+				body.single .sidebar {
+					display:none !important;
+				}
+
+				body.single section.bloglist .left {
+					width:100% !important;
+				}
+
+			<?php
+
+			}
+
+			else if (isset($layout_single) && $layout_single == 'valoare2') {
+
+			?>
+
+				body.single .list-post-info   {
+
+					display:none !important;
+
+				}
+
+				body.single .list-post-content {
+
+					width:100% !important;
+
+				}
+
+			<?php
+
+			}
+			if (!isset($address_map) || ($address_map == '')) {
+
+			?>
+
+				.contact .left {
+
+					display:none !important;
+
+				}
+
+				.contact .right {
+
+					width:100% !important;
+
+				}
+
+			<?php
+
+			}
+			?>
+	</style>
+<?php
 }
