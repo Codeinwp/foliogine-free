@@ -7,7 +7,7 @@ add_action( 'admin_menu', 'foliogine_lite_options_add_page' );
 function foliogine_lite_options_add_page() {
 
 	$render = new foliogine_liteRenderView();
-	add_theme_page( __( foliogine_lite_config("admin_page_title"), 'foliogine_lite' ), __( foliogine_lite_config("admin_page_menu_name"), 'foliogine_lite' ), 'edit_theme_options', foliogine_lite_config("menu_slug"), array($render,'show') );
+	add_theme_page( __( foliogine_lite_config("admin_page_title"), 'foliogine-lite' ), __( foliogine_lite_config("admin_page_menu_name"), 'foliogine-lite' ), 'edit_theme_options', foliogine_lite_config("menu_slug"), array($render,'show') );
 
 
 }

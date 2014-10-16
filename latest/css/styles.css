@@ -1,9 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 /* font-family: 'Open Sans', sans-serif; font-weight: 400; */
 
-@import url('bootstrap.css');
-@import url('bootstrap-responsive.css');
-
 
 body{
 	background: url(../img/bg-whole-page.png) repeat;

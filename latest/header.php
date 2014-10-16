@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package foliogine
+ * @package foliogine-lite
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -32,15 +32,15 @@
 
 			<?php
 
-			$logo = foliogine_lite('logo_image');
-			$logo_text = foliogine_lite('logo_text');
+			$foliogine_lite_logo = foliogine_lite('logo_image');
+			$foliogine_lite_logo_text = foliogine_lite('logo_text');
 
-			if (isset($logo) && $logo != '') :
+			if (isset($foliogine_lite_logo) && $foliogine_lite_logo != '') :
 				echo '<a class="brand" href="'.get_site_url().'" title="'.get_bloginfo('name').'">';
-                if (isset($logo_text) && $logo_text != ''):
-                    echo '<img src="'.$logo.'" alt="'.$logo_text.'">';
+                if (isset($foliogine_lite_logo_text) && $foliogine_lite_logo_text != ''):
+                    echo '<img src="'.esc_url($foliogine_lite_logo).'" alt="'.esc_attr($foliogine_lite_logo_text).'">';
                 else:
-                    echo '<img src="'.$logo.'" alt="'.get_bloginfo('name').'">';
+                    echo '<img src="'.esc_url($foliogine_lite_logo).'" alt="'.get_bloginfo('name').'">';
 				endif;
 				echo '</a>';
             else:

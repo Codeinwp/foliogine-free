@@ -1,7 +1,7 @@
 <?php
 /*
  * The template for displaying the front page.
- * @package foliogine
+ * @package foliogine-lite
  */
 
 get_header();
@@ -12,7 +12,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
     endwhile;
 }else {
-    $id = 0;
+    $foliogine_lite_id = 0;
     get_template_part('sections');
 }
 get_footer();

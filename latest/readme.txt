@@ -6,7 +6,7 @@ featured-images, theme-options, threaded-comments, translation-ready
 
 Requires at least:	3.3.0
 
-Tested up to:		3.8.2
+Tested up to:		4.0
 
 
 Foliogine
@@ -56,4 +56,4 @@ The exceptions to this license are as follows:
 
 * slider-bg.jpg
     License: Distributed under Creative Commons Zero
-    Surce: https://unsplash.imgix.net/46/unsplash_52c319226cefb_1.JPG?q=75&fm=jpg&auto=format&s=3d1ae11e42d98eac6dbcfccfb013d81b
+    Source: https://unsplash.imgix.net/46/unsplash_52c319226cefb_1.JPG?q=75&fm=jpg&auto=format&s=3d1ae11e42d98eac6dbcfccfb013d81b

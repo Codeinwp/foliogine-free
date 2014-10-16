@@ -2,22 +2,22 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package foliogine
+ * @package foliogine-lite
  */
 ?>
 
 <?php get_header(); ?>
 <?php
-	$date = foliogine_lite('date');
-	$the_author = foliogine_lite('author');
-	$the_category = foliogine_lite('category');
-	$tags = foliogine_lite('tags');
-	$featured_image = foliogine_lite('featured_image');
+	$foliogine_lite_date = foliogine_lite('date');
+	$foliogine_lite_the_author = foliogine_lite('author');
+	$foliogine_lite_the_category = foliogine_lite('category');
+	$foliogine_lite_tags = foliogine_lite('tags');
+	$foliogine_lite_featured_image = foliogine_lite('featured_image');
 ?>
 <section class="title-page-area">
 	<div class="container">
 
-		<h1><?php printf( __( 'Search Results for: %s', 'foliogine' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1><?php printf( __( 'Search Results for: %s', 'foliogine-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
     </div><!-- .container -->
 </section><!-- .title-page-area -->
@@ -27,35 +27,34 @@
 		<div class="left">
 		<?php
 		while ( have_posts() ) : the_post();
-			foliogine_lite_setPostViews(get_the_ID());
 		?>
 			<div class="list-post-box">
 				<div class="list-post-info">
 				<?php
 
-					if (isset($date) && $date == 'show') {
-						$d = get_the_date('F j Y','','',false);
-						$dt = get_the_date('Y-m-d','','',false);
-						echo '<time datetime="'.$dt.'"><span>'.$d.'</span></time>';
+					if (isset($foliogine_lite_date) && $foliogine_lite_date == 'show') {
+						$foliogine_lite_d = get_the_date('F j Y','','',false);
+						$foliogine_lite_dt = get_the_date('Y-m-d','','',false);
+						echo '<time datetime="'.$foliogine_lite_dt.'"><span>'.$foliogine_lite_d.'</span></time>';
 					}
-					if (isset($the_author) && $the_author == 'show') {
-						$author = get_the_author();
-						echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+					if (isset($foliogine_lite_the_author) && $foliogine_lite_the_author == 'show') {
+						$foliogine_lite_author = get_the_author();
+						echo '<p class="hidden-tablet"><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
 					}
-					if (isset($the_category) && $the_category == 'show') {
+					if (isset($foliogine_lite_the_category) && $foliogine_lite_the_category == 'show') {
 
-						$category = get_the_category();
-						$cats = get_the_category($post->ID);
-						if (!empty($cats)) {
-							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine').'</span>';
-							foreach($cats as $c) {
-								echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
+						$foliogine_lite_category = get_the_category();
+						$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+						if (!empty($foliogine_lite_cats)) {
+							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
+							foreach($foliogine_lite_cats as $foliogine_lite_c) {
+								echo '<a href="'.get_category_link($foliogine_lite_c->cat_ID).'">'.$foliogine_lite_c->cat_name.'</a> ';
 							}
 							echo '</p>';
 						}
 					}
-					if (isset($tags) && $tags == 'show' && has_tag()) {
-						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine').'</span>';
+					if (isset($foliogine_lite_tags) && $foliogine_lite_tags == 'show' && has_tag()) {
+						echo '<p class="hidden-tablet"><span>'.__('Tagged with ','foliogine-lite').'</span>';
 						the_tags('');
 						echo '</p>';
 					}
@@ -64,11 +63,11 @@
 
 				<div <?php post_class('list-post-content'); ?>>
 					<div class="post-img">
-					<?php if (isset($featured_image) && $featured_image == 'Show') { ?>
+					<?php if (isset($foliogine_lite_featured_image) && $foliogine_lite_featured_image == 'Show') { ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php
-							if ( has_post_thumbnail($post->ID) ) {
-								echo get_the_post_thumbnail($post->ID, 'blog-small');
+							if ( has_post_thumbnail($foliogine_lite_post->ID) ) {
+								echo get_the_post_thumbnail($foliogine_lite_post->ID, 'blog-small');
 							}
 						?>
 						</a>
@@ -77,33 +76,37 @@
 						<p><?php the_excerpt(); ?></p>
 						<div class="post-info-phone">
 						<?php
-							if (isset($the_author) && $the_author == 'show') {
-								$author = get_the_author();
-								echo '<p><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+							if (isset($foliogine_lite_the_author) && $foliogine_lite_the_author == 'show') {
+								$foliogine_lite_author = get_the_author();
+								echo '<p><span>'.__('Posted by ','foliogine-lite').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$foliogine_lite_author.'</a></p>';
 							}
-							if (isset($the_category) && $the_category == 'show') {
+							if (isset($foliogine_lite_the_category) && $foliogine_lite_the_category == 'show') {
 
-								$category = get_the_category();
-								$cats = get_the_category($post->ID);
-								if (!empty($cats)) {
-									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine').'</span>';
-									foreach($cats as $c) {
-										echo '<a href="'.get_category_link($c->cat_ID).'">'.$c->cat_name.'</a> ';
+								$foliogine_lite_category = get_the_category();
+								$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+								if (!empty($foliogine_lite_cats)) {
+									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
+									foreach($foliogine_lite_cats as $foliogine_lite_c) {
+										echo '<a href="'.get_category_link($foliogine_lite_c->cat_ID).'">'.$foliogine_lite_c->cat_name.'</a> ';
 									}
 									echo '</p>';
 								}
 							}
-							if (isset($tags) && $tags == 'Show' && has_tag()) {
-									echo '<p><span>'.__('Tagged with ','foliogine').'</span>';
+							if (isset($foliogine_lite_tags) && $foliogine_lite_tags == 'Show' && has_tag()) {
+									echo '<p><span>'.__('Tagged with ','foliogine-lite').'</span>';
 									the_tags('');
 									echo '</p>';
 							}
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($post->ID);?>" title="Continue reading" class="continue"><?php _e('Continue reading','foliogine') ?> ></a>
+							<a href="<?php echo get_permalink($foliogine_lite_post->ID);?>" title="Continue reading" class="continue"><?php _e('Continue reading','foliogine-lite') ?> ></a>
+                             <?php
+                                 if (isset($foliogine_lite_comments) && $foliogine_lite_comments == 'show') {
+
+                             ?>
 							<a class="icons comm" title="Comments"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
-							<a class="icons eye" title="Views"><span></span><?php echo foliogine_lite_getPostViews(get_the_ID()); ?></a>
+                            <?php } ?>
 						</p><!-- .bottom-line -->
 					</div><!-- .post-img -->
 				</div><!-- .list-post-content -->
@@ -117,8 +120,8 @@
 			<div class="pagination-wrap">
 
 				<p class="right">
-					<?php previous_posts_link( __( 'Prev', 'foliogine' ) ); ?>
-					<?php next_posts_link( __( 'Next', 'foliogine' ) ); ?>
+					<?php previous_posts_link( __( 'Prev', 'foliogine-lite' ) ); ?>
+					<?php next_posts_link( __( 'Next', 'foliogine-lite' ) ); ?>
 				</p>
 
 			</div><!-- /pagination-->
@@ -140,45 +143,45 @@
     /*
 	* Slider section
 	*/
-	$slider_search = foliogine_lite('slider_search');
+	$foliogine_lite_slider_search = foliogine_lite('slider_search');
 
-	if (isset($slider_search) && $slider_search == 'show'):
+	if (isset($foliogine_lite_slider_search) && $foliogine_lite_slider_search == 'show'):
         get_template_part('/inc/slider');
 	endif;
 
 	/*
 	* Our services
 	*/
-	$services_search = foliogine_lite('services_search');
+	$foliogine_lite_services_search = foliogine_lite('services_search');
 
-	if (isset($services_search) && $services_search == 'show'):
+	if (isset($foliogine_lite_services_search) && $foliogine_lite_services_search == 'show'):
         get_template_part('/inc/our-services');
 	endif;
 
     /*
 	* Our team section
 	*/
-	$team_search = foliogine_lite('team_search');
+	$foliogine_lite_team_search = foliogine_lite('team_search');
 
-	if (isset($team_search) && $team_search == 'show'):
+	if (isset($foliogine_lite_team_search) && $foliogine_lite_team_search == 'show'):
         get_template_part('/inc/our-team');
 	endif;
 
 	/*
 	* Testimonial
 	*/
-	$testimonial_search = foliogine_lite('testimonial_search');
+	$foliogine_lite_testimonial_search = foliogine_lite('testimonial_search');
 
-	if (isset($testimonial_search) && $testimonial_search == 'show'):
+	if (isset($foliogine_lite_testimonial_search) && $foliogine_lite_testimonial_search == 'show'):
         get_template_part('/inc/testimonial-options');
 	endif;
 
     /*
     * Download brochure section
     */
-	$download_search = foliogine_lite('download_search');
+	$foliogine_lite_download_search = foliogine_lite('download_search');
 
-	if (isset($download_search) && $download_search == 'show'):
+	if (isset($foliogine_lite_download_search) && $foliogine_lite_download_search == 'show'):
         get_template_part('/inc/brochure');
     endif;
 
@@ -186,9 +189,9 @@
 	/*
 	* OUR SKILLS section
 	*/
-	$skill_search = foliogine_lite('skill_search');
+	$foliogine_lite_skill_search = foliogine_lite('skill_search');
 
-	if (isset($skill_search) && $skill_search == 'show'):
+	if (isset($foliogine_lite_skill_search) && $foliogine_lite_skill_search == 'show'):
         get_template_part('/inc/our-skills');
     endif;
 
