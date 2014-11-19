@@ -43,7 +43,7 @@
 						if (isset($foliogine_lite_category_single) && $foliogine_lite_category_single == 'show') {
 
 							$foliogine_lite_category = get_the_category();
-							$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+							$foliogine_lite_cats = get_the_category(get_the_ID());
 							if (!empty($foliogine_lite_cats)) {
 								echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 								foreach($foliogine_lite_cats as $foliogine_lite_c) {
@@ -64,8 +64,8 @@
 						<div>
 						<?php
 							if (isset($foliogine_lite_featured_image_single) && $foliogine_lite_featured_image_single == 'show') {
-								if ( has_post_thumbnail($foliogine_lite_post->ID) ) {
-									echo get_the_post_thumbnail($foliogine_lite_post->ID, 'blog-small');
+								if ( has_post_thumbnail(get_the_ID()) ) {
+									echo get_the_post_thumbnail(get_the_ID(), 'blog-small');
 								}
 							}
 						?>
@@ -82,7 +82,7 @@
 					}
 					if (isset($foliogine_lite_category_single) && $foliogine_lite_category_single == 'show') {
 						$foliogine_lite_category = get_the_category();
-						$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+						$foliogine_lite_cats = get_the_category(get_the_ID());
 						if (!empty($foliogine_lite_cats)) {
 							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 							foreach($foliogine_lite_cats as $foliogine_lite_c) {

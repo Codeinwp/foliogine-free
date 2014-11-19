@@ -44,7 +44,7 @@
 					if (isset($foliogine_lite_the_category) && $foliogine_lite_the_category == 'show') {
 
 						$foliogine_lite_category = get_the_category();
-						$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+						$foliogine_lite_cats = get_the_category(get_the_ID());
 						if (!empty($foliogine_lite_cats)) {
 							echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 							foreach($foliogine_lite_cats as $foliogine_lite_c) {
@@ -83,7 +83,7 @@
 							if (isset($foliogine_lite_the_category) && $foliogine_lite_the_category == 'show') {
 
 								$foliogine_lite_category = get_the_category();
-								$foliogine_lite_cats = get_the_category($foliogine_lite_post->ID);
+								$foliogine_lite_cats = get_the_category(get_the_ID());
 								if (!empty($foliogine_lite_cats)) {
 									echo '<p class="hidden-tablet"><span>'.__('Posted in ','foliogine-lite').'</span>';
 									foreach($foliogine_lite_cats as $foliogine_lite_c) {
@@ -100,7 +100,7 @@
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($foliogine_lite_post->ID);?>" title="Continue reading" class="continue"><?php _e('Continue reading','foliogine-lite') ?> ></a>
+							<a href="<?php echo get_permalink(get_the_ID());?>" title="Continue reading" class="continue"><?php _e('Continue reading','foliogine-lite') ?> ></a>
                              <?php
                                  if (isset($foliogine_lite_comments) && $foliogine_lite_comments == 'show') {
 

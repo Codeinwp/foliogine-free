@@ -16,7 +16,7 @@
 							<div class="carousel-inner">
 								<div class="item active">
 									<?php
-										if (isset($foliogine_lite_slide_image1) && $foliogine_lite_slide_image1 != '') :
+										if ( !empty($foliogine_lite_slide_image1) ) :
 											echo '<img src="'.esc_url($foliogine_lite_slide_image1).'" alt="'.esc_attr(get_bloginfo('name')).'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/image-on-screen-colors.jpg" alt="'.get_bloginfo('name').'">';
@@ -25,7 +25,7 @@
 								</div>
 								<div class="item">
 									<?php
-										if (isset($foliogine_lite_slide_image2) && $foliogine_lite_slide_image2 != '') :
+										if ( !empty($foliogine_lite_slide_image2) ) :
 											echo '<img src="'.esc_url($foliogine_lite_slide_image2).'" alt="'.get_bloginfo('name').'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/img-on-screen-mobile-tablet.jpg" alt="'.get_bloginfo('name').'">';
@@ -34,7 +34,7 @@
 								</div>
 								<div class="item">
 									<?php
-										if (isset($foliogine_lite_slide_image3) && $foliogine_lite_slide_image3 != '') :
+										if ( !empty($foliogine_lite_slide_image3) ) :
 											echo '<img src="'.esc_url($foliogine_lite_slide_image3).'" alt="'.get_bloginfo('name').'">';
 										else:
 											echo '<img src="'.get_template_directory_uri().'/img/img-on-screen.jpg" alt="'.get_bloginfo('name').'">';
@@ -61,7 +61,7 @@
 					<?php
 						else:
 
-							if (isset($foliogine_lite_slider_bigtitle) && $foliogine_lite_slider_bigtitle != ''):
+							if ( !empty($foliogine_lite_slider_bigtitle)):
 								echo '<div class="welcome-text">'.esc_html($foliogine_lite_slider_bigtitle).'</div>';
 							endif;
 							if ((isset($foliogine_lite_slider_title) && $foliogine_lite_slider_title != '') || (isset($foliogine_lite_slider_subtitle) && $foliogine_lite_slider_subtitle != '')):

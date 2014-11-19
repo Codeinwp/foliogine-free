@@ -31,8 +31,8 @@
 				<p class="top">
 					<a href="#" title="">
 					<?php
-						if (isset($foliogine_lite_logo_footer) && $foliogine_lite_logo_footer != '') {
-							if (isset($foliogine_lite_logo_footer_text) && $foliogine_lite_logo_footer_text != '')
+						if ( !empty($foliogine_lite_logo_footer) ) {
+							if ( !empty($foliogine_lite_logo_footer_text) )
 								echo '<img src="'.esc_url($foliogine_lite_logo_footer).'" alt="'.esc_attr($foliogine_lite_logo_footer_text).'">';
 							else
 								echo '<img src="'.esc_url($foliogine_lite_logo_footer).'" alt="'.bloginfo('name').'">';
@@ -41,16 +41,16 @@
 					</a>
 				</p>
 				<?php
-				if (isset($foliogine_lite_address) && $foliogine_lite_address != '')
+				if ( !empty($foliogine_lite_address) )
 					echo '<p class="text">'.esc_html($foliogine_lite_address).'</p>';
 				?>
 					<p class="text">
 						<?php
-							if (isset($foliogine_lite_phone) && $foliogine_lite_phone != '')
+							if ( !empty($foliogine_lite_phone) )
 								echo __('Phone:','foliogine-lite').esc_html($foliogine_lite_phone).'</br>';
 						?>
 						<?php
-							if (isset($foliogine_lite_email) && $foliogine_lite_email != '')
+							if ( !empty($foliogine_lite_email) )
 								echo __('Email:','foliogine-lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
 						?>
 					</p>
@@ -63,8 +63,8 @@
 					<p class="top">
 						<a href="#" title="">
 							<?php
-							if (isset($foliogine_lite_logo_footer) && $foliogine_lite_logo_footer != '') {
-								if (isset($foliogine_lite_logo_footer_text) && $foliogine_lite_logo_footer_text != '')
+							if ( !empty($foliogine_lite_logo_footer) ) {
+								if ( !empty($foliogine_lite_logo_footer_text) )
 									echo '<img src="'.esc_url($foliogine_lite_logo_footer).'" alt="'.esc_html($foliogine_lite_logo_footer_text).'">';
 								else
 									echo '<img src="'.esc_url($foliogine_lite_logo_footer).'" alt="">';
@@ -73,7 +73,7 @@
 						</a>
 					</p>
 					<?php
-						if (isset($foliogine_lite_address) && $foliogine_lite_address != '') {
+						if ( !empty($foliogine_lite_address) ) {
 							echo '<p class="text">'.esc_html($foliogine_lite_address).'</p>';
 						}
 					?>
@@ -82,12 +82,12 @@
 					<p class="top"></p>
 					<p class="text">
 					<?php
-						if (isset($foliogine_lite_phone) && $foliogine_lite_phone != '') {
+						if ( !empty($foliogine_lite_phone) ) {
 							echo __('Phone:','foliogine-lite').esc_html($foliogine_lite_phone).'<br />';
 						}
 					?>
 					<?php
-						if (isset($foliogine_lite_email) && $foliogine_lite_email != '')
+						if ( !empty($foliogine_lite_email) )
 							echo __('Email:','foliogine-lite').'<a href="mailto:'.esc_html($foliogine_lite_email).'">'.esc_html($foliogine_lite_email).'</a>';
 					?>
 					</p>
@@ -97,18 +97,18 @@
 		}
 	?>
 	<div class="footer-box-right">
-		<?php	if ( (isset($foliogine_lite_linkedin) && $foliogine_lite_linkedin != '') || (isset($foliogine_lite_rss) && $foliogine_lite_rss != '') || (isset($foliogine_lite_twitter) && $foliogine_lite_twitter != '')) { ?>
+		<?php	if ( !empty($foliogine_lite_linkedin) || !empty($foliogine_lite_rss) || !empty($foliogine_lite_twitter)) { ?>
 			<p class="social">
-			<?php 	if (isset($foliogine_lite_linkedin) && $foliogine_lite_linkedin != '')
+			<?php 	if ( !empty($foliogine_lite_linkedin) )
 						echo "<a href='".esc_url($foliogine_lite_linkedin)."' class='lin'></a>";
-					if (isset($foliogine_lite_rss) && $foliogine_lite_rss != '')
+					if ( !empty($foliogine_lite_rss) )
 						echo "<a href='".esc_url($foliogine_lite_rss)."' class='rss'></a>";
-					if (isset($foliogine_lite_twitter) && $foliogine_lite_twitter != '')
+					if ( !empty($foliogine_lite_twitter) )
 						echo "<a href='".esc_url($foliogine_lite_twitter)."' class='tw'></a>";
 			?>
 			</p>
 			<?php  }?>
-			<?php		if (isset($foliogine_lite_copyright) && $foliogine_lite_copyright != ''):
+			<?php		if ( !empty($foliogine_lite_copyright) ):
 							echo '<p>'.esc_html($foliogine_lite_copyright).'</p>';
 						else: ?>
 							<p>Foliogine Lite &copy; <?php echo date('Y'); ?> <br><?php _e('All rights reserved.','foliogine-lite'); ?></p>
