@@ -1,15 +1,1176 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Foliogine Lite\n"
-"POT-Creation-Date: 2014-10-14 15:42+0200\n"
-"PO-Revision-Date: 2014-10-14 15:44+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-24 14:36+0200\n"
+"PO-Revision-Date: 2014-11-24 14:36+0200\n"
 "Last-Translator: \n"
-"Language-Team: codeinwp <support@codeinwp.com>\n"
+"Language-Team: codeinwp <codeinwp.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_E\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: inc\n"
+"X-Poedit-SearchPath-2: admin\n"
+
+#: 404.php:11
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:16
+msgid "It looks like nothing was found at this location"
+msgstr ""
+
+#: archive.php:24
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: archive.php:26
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: archive.php:39
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:42
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:45
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:48
+msgid "Asides"
+msgstr ""
+
+#: archive.php:51
+msgid "Images"
+msgstr ""
+
+#: archive.php:54
+msgid "Videos"
+msgstr ""
+
+#: archive.php:57
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:60
+msgid "Links"
+msgstr ""
+
+#: archive.php:63
+msgid "Archives"
+msgstr ""
+
+#: archive.php:87
+#: archive.php:126
+#: index.php:46
+#: index.php:85
+#: search.php:42
+#: search.php:81
+#: sections.php:1
+msgid "Posted by "
+msgstr ""
+
+#: archive.php:90
+#: archive.php:94
+#: archive.php:130
+#: archive.php:134
+#: index.php:53
+#: index.php:92
+#: search.php:49
+#: search.php:88
+#: sections.php:1
+msgid "Posted in "
+msgstr ""
+
+#: archive.php:102
+#: archive.php:142
+#: index.php:61
+#: index.php:100
+#: search.php:57
+#: search.php:96
+#: sections.php:1
+msgid "Tagged with "
+msgstr ""
+
+#: archive.php:149
+#: index.php:107
+#: search.php:103
+#: sections.php:1
+msgid "Continue reading"
+msgstr ""
+
+#: archive.php:153
+#: comments.php:27
+#: index.php:112
+#: sections.php:1
+msgid "Comments"
+msgstr ""
+
+#: archive.php:169
+#: index.php:127
+#: search.php:123
+#: sections.php:1
+msgid "Prev"
+msgstr ""
+
+#: archive.php:170
+#: index.php:128
+#: search.php:124
+#: sections.php:1
+msgid "Next"
+msgstr ""
+
+#: comments.php:31
+#: comments.php:57
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:32
+#: comments.php:58
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:33
+#: comments.php:59
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:83
+msgid "Name*"
+msgstr ""
+
+#: comments.php:84
+msgid "Email*"
+msgstr ""
+
+#: comments.php:85
+msgid "URL"
+msgstr ""
+
+#: footer.php:50
+#: footer.php:86
+msgid "Phone:"
+msgstr ""
+
+#: footer.php:54
+#: footer.php:91
+msgid "Email:"
+msgstr ""
+
+#: footer.php:114
+msgid "All rights reserved."
+msgstr ""
+
+#: functions.php:53
+msgid "Top menu"
+msgstr ""
+
+#: functions.php:79
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:157
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:179
+msgid "Default title"
+msgstr ""
+
+#: image.php:30
+#, php-format
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$foliogine_lite_s\">%2$foliogine_lite_s</time></span> at <a href=\"%3$foliogine_lite_s\" title=\"Link to full-size image\">%4$foliogine_lite_s &times; %5$foliogine_lite_s</a> in <a href=\"%6$foliogine_lite_s\" title=\"Return to %7$foliogine_lite_s\" rel=\"gallery\">%8$foliogine_lite_s</a>"
+msgstr ""
+
+#: image.php:41
+#: image.php:166
+msgid "Edit"
+msgstr ""
+
+#: image.php:46
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:49
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: image.php:129
+msgid "Pages:"
+msgstr ""
+
+#: image.php:142
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:148
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:154
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: image.php:160
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: index.php:25
+msgid "Blog"
+msgstr ""
+
+#: no-results.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:26
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$foliogine_lite_s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:31
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: no-results.php:37
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:19
+msgid "Recent posts"
+msgstr ""
+
+#: sidebar.php:57
+msgid "Recent comments"
+msgstr ""
+
+#: sidebar.php:82
+msgid "Archive"
+msgstr ""
+
+#: single.php:103
+msgid "Back to top"
+msgstr ""
+
+#: admin/inc/config.php:34
+msgid "General options"
+msgstr ""
+
+#: admin/inc/config.php:40
+#: admin/inc/config.php:45
+#: admin/inc/config.php:46
+#: admin/inc/config.php:814
+msgid "Logo"
+msgstr ""
+
+#: admin/inc/config.php:52
+#: admin/inc/config.php:53
+msgid "Logo text"
+msgstr ""
+
+#: admin/inc/config.php:62
+msgid "Download brochure section options"
+msgstr ""
+
+#: admin/inc/config.php:67
+#: admin/inc/config.php:126
+#: admin/inc/config.php:210
+#: admin/inc/config.php:336
+#: admin/inc/config.php:464
+#: admin/inc/config.php:530
+msgid "Select all the pages where you want this section to appear"
+msgstr ""
+
+#: admin/inc/config.php:68
+#: admin/inc/config.php:127
+#: admin/inc/config.php:211
+#: admin/inc/config.php:337
+#: admin/inc/config.php:465
+#: admin/inc/config.php:531
+msgid "Hold down the control (ctrl) button to select multiple options"
+msgstr ""
+
+#: admin/inc/config.php:75
+#: admin/inc/config.php:134
+#: admin/inc/config.php:218
+#: admin/inc/config.php:344
+#: admin/inc/config.php:472
+#: admin/inc/config.php:538
+msgid "Archive page"
+msgstr ""
+
+#: admin/inc/config.php:76
+#: admin/inc/config.php:539
+msgid "Show or hide download brochure section in the archive page."
+msgstr ""
+
+#: admin/inc/config.php:79
+#: admin/inc/config.php:90
+#: admin/inc/config.php:348
+#: admin/inc/config.php:359
+#: admin/inc/config.php:476
+#: admin/inc/config.php:487
+#: admin/inc/config.php:542
+#: admin/inc/config.php:553
+#: admin/inc/config.php:660
+#: admin/inc/config.php:671
+#: admin/inc/config.php:682
+#: admin/inc/config.php:693
+#: admin/inc/config.php:704
+#: admin/inc/config.php:734
+#: admin/inc/config.php:745
+#: admin/inc/config.php:756
+#: admin/inc/config.php:767
+#: admin/inc/config.php:778
+#: admin/inc/config.php:789
+msgid "Hide"
+msgstr ""
+
+#: admin/inc/config.php:80
+#: admin/inc/config.php:91
+#: admin/inc/config.php:349
+#: admin/inc/config.php:360
+#: admin/inc/config.php:477
+#: admin/inc/config.php:488
+#: admin/inc/config.php:543
+#: admin/inc/config.php:554
+#: admin/inc/config.php:661
+#: admin/inc/config.php:672
+#: admin/inc/config.php:683
+#: admin/inc/config.php:694
+#: admin/inc/config.php:705
+#: admin/inc/config.php:735
+#: admin/inc/config.php:746
+#: admin/inc/config.php:757
+#: admin/inc/config.php:768
+#: admin/inc/config.php:779
+#: admin/inc/config.php:790
+msgid "Show"
+msgstr ""
+
+#: admin/inc/config.php:86
+#: admin/inc/config.php:145
+#: admin/inc/config.php:229
+#: admin/inc/config.php:355
+#: admin/inc/config.php:483
+#: admin/inc/config.php:549
+msgid "Search page"
+msgstr ""
+
+#: admin/inc/config.php:87
+#: admin/inc/config.php:550
+msgid "Show or hide download brochure section in the search page."
+msgstr ""
+
+#: admin/inc/config.php:97
+msgid "Download brochure text left side"
+msgstr ""
+
+#: admin/inc/config.php:98
+msgid "Enter a text to appear in the left side of the download brochure button."
+msgstr ""
+
+#: admin/inc/config.php:104
+msgid "Title for the Download brochure button"
+msgstr ""
+
+#: admin/inc/config.php:105
+msgid "Enter a title to appear on the download brochure button."
+msgstr ""
+
+#: admin/inc/config.php:111
+msgid "Link for the Download brochure button"
+msgstr ""
+
+#: admin/inc/config.php:112
+msgid "Enter the link of the download brochure button."
+msgstr ""
+
+#: admin/inc/config.php:121
+msgid "Slider section options"
+msgstr ""
+
+#: admin/inc/config.php:135
+msgid "Show or hide slider section in the archive page."
+msgstr ""
+
+#: admin/inc/config.php:146
+msgid "Show or hide slider section in the search page."
+msgstr ""
+
+#: admin/inc/config.php:156
+msgid "Slider big title"
+msgstr ""
+
+#: admin/inc/config.php:157
+msgid "Enter a big title for the slider."
+msgstr ""
+
+#: admin/inc/config.php:159
+msgid "Hello and welcome, we are ThemeIsle, browse our portfolio."
+msgstr ""
+
+#: admin/inc/config.php:163
+msgid "Slider title"
+msgstr ""
+
+#: admin/inc/config.php:164
+msgid "Enter a title for the slider."
+msgstr ""
+
+#: admin/inc/config.php:166
+msgid "Professional WordPress theme"
+msgstr ""
+
+#: admin/inc/config.php:170
+msgid "Slider subtitle"
+msgstr ""
+
+#: admin/inc/config.php:171
+msgid "Enter a subtitle for the slider."
+msgstr ""
+
+#: admin/inc/config.php:173
+msgid "Fully responsive and retina ready."
+msgstr ""
+
+#: admin/inc/config.php:178
+#: admin/inc/config.php:179
+msgid "Slide image 1"
+msgstr ""
+
+#: admin/inc/config.php:186
+#: admin/inc/config.php:187
+msgid "Slide image 2"
+msgstr ""
+
+#: admin/inc/config.php:194
+#: admin/inc/config.php:195
+msgid "Slide image 3"
+msgstr ""
+
+#: admin/inc/config.php:205
+msgid "Our services section options"
+msgstr ""
+
+#: admin/inc/config.php:219
+msgid "Show or hide our services section in the archive page."
+msgstr ""
+
+#: admin/inc/config.php:230
+msgid "Show or hide our services section in the search page."
+msgstr ""
+
+#: admin/inc/config.php:241
+msgid "Image 1"
+msgstr ""
+
+#: admin/inc/config.php:248
+msgid "Title 1"
+msgstr ""
+
+#: admin/inc/config.php:249
+msgid "Enter the first service title"
+msgstr ""
+
+#: admin/inc/config.php:251
+msgid "Service 1"
+msgstr ""
+
+#: admin/inc/config.php:255
+msgid "Text 1"
+msgstr ""
+
+#: admin/inc/config.php:256
+msgid "Enter the first service text"
+msgstr ""
+
+#: admin/inc/config.php:258
+#: admin/inc/config.php:280
+#: admin/inc/config.php:302
+#: admin/inc/config.php:324
+#: admin/inc/config.php:504
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi nunc, consequat quis tempor faucibus, gravida id lorem. "
+msgstr ""
+
+#: admin/inc/config.php:263
+msgid "Image 2"
+msgstr ""
+
+#: admin/inc/config.php:270
+msgid "Title 2"
+msgstr ""
+
+#: admin/inc/config.php:271
+msgid "Enter the second service title"
+msgstr ""
+
+#: admin/inc/config.php:273
+msgid "Service 2"
+msgstr ""
+
+#: admin/inc/config.php:277
+msgid "Text 2"
+msgstr ""
+
+#: admin/inc/config.php:278
+msgid "Enter the second service text"
+msgstr ""
+
+#: admin/inc/config.php:285
+msgid "Image 3"
+msgstr ""
+
+#: admin/inc/config.php:292
+msgid "Title 3"
+msgstr ""
+
+#: admin/inc/config.php:293
+msgid "Enter the third service title"
+msgstr ""
+
+#: admin/inc/config.php:295
+msgid "Service 3"
+msgstr ""
+
+#: admin/inc/config.php:299
+msgid "Text 3"
+msgstr ""
+
+#: admin/inc/config.php:300
+msgid "Enter the third service text"
+msgstr ""
+
+#: admin/inc/config.php:307
+msgid "Image 4"
+msgstr ""
+
+#: admin/inc/config.php:314
+msgid "Title 4"
+msgstr ""
+
+#: admin/inc/config.php:315
+msgid "Enter the fourth service title"
+msgstr ""
+
+#: admin/inc/config.php:317
+msgid "Service 4"
+msgstr ""
+
+#: admin/inc/config.php:321
+msgid "Text 4"
+msgstr ""
+
+#: admin/inc/config.php:322
+msgid "Enter the fourth service text"
+msgstr ""
+
+#: admin/inc/config.php:331
+msgid "Our team section options"
+msgstr ""
+
+#: admin/inc/config.php:345
+msgid "Show or hide our team section in the archive page."
+msgstr ""
+
+#: admin/inc/config.php:356
+msgid "Show or hide our team section in the search page."
+msgstr ""
+
+#: admin/inc/config.php:367
+msgid "Person image 1"
+msgstr ""
+
+#: admin/inc/config.php:374
+msgid "Person Name 1"
+msgstr ""
+
+#: admin/inc/config.php:375
+msgid "Enter the first person's name to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:377
+#: admin/inc/config.php:399
+#: admin/inc/config.php:421
+#: admin/inc/config.php:443
+#: admin/inc/config.php:511
+msgid "John Doe"
+msgstr ""
+
+#: admin/inc/config.php:381
+msgid "Person Job 1"
+msgstr ""
+
+#: admin/inc/config.php:382
+msgid "Enter the first person's job to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:384
+#: admin/inc/config.php:406
+#: admin/inc/config.php:428
+#: admin/inc/config.php:450
+#: admin/inc/config.php:518
+msgid "CEO"
+msgstr ""
+
+#: admin/inc/config.php:389
+msgid "Person image 2"
+msgstr ""
+
+#: admin/inc/config.php:396
+msgid "Person Name 2"
+msgstr ""
+
+#: admin/inc/config.php:397
+msgid "Enter the second person's name to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:403
+msgid "Person Job 2"
+msgstr ""
+
+#: admin/inc/config.php:404
+msgid "Enter the second person's job to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:411
+msgid "Person image 3"
+msgstr ""
+
+#: admin/inc/config.php:418
+msgid "Person Name 3"
+msgstr ""
+
+#: admin/inc/config.php:419
+msgid "Enter the third person's name to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:425
+msgid "Person Job 3"
+msgstr ""
+
+#: admin/inc/config.php:426
+msgid "Enter the third person's job to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:433
+msgid "Person image 4"
+msgstr ""
+
+#: admin/inc/config.php:440
+msgid "Person Name 4"
+msgstr ""
+
+#: admin/inc/config.php:441
+msgid "Enter the fourth person's name to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:447
+msgid "Person Job 4"
+msgstr ""
+
+#: admin/inc/config.php:448
+msgid "Enter the fourth person's job to appear in the our team area"
+msgstr ""
+
+#: admin/inc/config.php:459
+msgid "Testimonials section options"
+msgstr ""
+
+#: admin/inc/config.php:473
+msgid "Show or hide testimonials section in the archive page."
+msgstr ""
+
+#: admin/inc/config.php:484
+msgid "Show or hide testimonials section in the search page."
+msgstr ""
+
+#: admin/inc/config.php:494
+#: admin/inc/config.php:560
+msgid "Title"
+msgstr ""
+
+#: admin/inc/config.php:495
+msgid "Enter the title to appear in the testimonials area"
+msgstr ""
+
+#: admin/inc/config.php:497
+msgid "Lorem Ipsum"
+msgstr ""
+
+#: admin/inc/config.php:501
+msgid "Content"
+msgstr ""
+
+#: admin/inc/config.php:502
+msgid "Enter the text to appear in the testimonials area"
+msgstr ""
+
+#: admin/inc/config.php:508
+#: admin/inc/config.php:689
+#: admin/inc/config.php:763
+msgid "Author"
+msgstr ""
+
+#: admin/inc/config.php:509
+msgid "Enter the author to appear in the testimonials area"
+msgstr ""
+
+#: admin/inc/config.php:515
+msgid "Info about the author"
+msgstr ""
+
+#: admin/inc/config.php:516
+msgid "Enter a small piece of information to appear after the author name in the testimonials area"
+msgstr ""
+
+#: admin/inc/config.php:525
+msgid "Our skills section options"
+msgstr ""
+
+#: admin/inc/config.php:561
+msgid "Enter the title to appear in the skills area"
+msgstr ""
+
+#: admin/inc/config.php:563
+msgid "Our skills"
+msgstr ""
+
+#: admin/inc/config.php:567
+msgid "First skill text"
+msgstr ""
+
+#: admin/inc/config.php:568
+msgid "Enter the text to appear in the first skill area"
+msgstr ""
+
+#: admin/inc/config.php:570
+msgid "CSS"
+msgstr ""
+
+#: admin/inc/config.php:574
+msgid "First skill value"
+msgstr ""
+
+#: admin/inc/config.php:575
+msgid "Enter the value for the first skill area"
+msgstr ""
+
+#: admin/inc/config.php:584
+msgid "Second skill text"
+msgstr ""
+
+#: admin/inc/config.php:585
+msgid "Enter the text to appear in the second skill area"
+msgstr ""
+
+#: admin/inc/config.php:587
+msgid "HTML"
+msgstr ""
+
+#: admin/inc/config.php:591
+msgid "Second skill value"
+msgstr ""
+
+#: admin/inc/config.php:592
+msgid "Enter the value for the second skill area"
+msgstr ""
+
+#: admin/inc/config.php:601
+msgid "Third skill text"
+msgstr ""
+
+#: admin/inc/config.php:602
+msgid "Enter the text to appear in the third skill area"
+msgstr ""
+
+#: admin/inc/config.php:604
+msgid "jQuery"
+msgstr ""
+
+#: admin/inc/config.php:608
+msgid "Third skill value"
+msgstr ""
+
+#: admin/inc/config.php:609
+msgid "Enter the value for the third skill area"
+msgstr ""
+
+#: admin/inc/config.php:618
+msgid "Fourth skill text"
+msgstr ""
+
+#: admin/inc/config.php:619
+msgid "Enter the text to appear in the fourth skill area"
+msgstr ""
+
+#: admin/inc/config.php:621
+msgid "Photoshop"
+msgstr ""
+
+#: admin/inc/config.php:625
+msgid "Fourth skill value"
+msgstr ""
+
+#: admin/inc/config.php:626
+msgid "Enter the value for the fourth skill area"
+msgstr ""
+
+#: admin/inc/config.php:639
+msgid "Blog + Search + Archive options"
+msgstr ""
+
+#: admin/inc/config.php:644
+msgid "Layout for blog page"
+msgstr ""
+
+#: admin/inc/config.php:645
+msgid "Choose the layout for the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:648
+#: admin/inc/config.php:722
+msgid "Left sidebar"
+msgstr ""
+
+#: admin/inc/config.php:649
+#: admin/inc/config.php:723
+msgid "Right sidebar"
+msgstr ""
+
+#: admin/inc/config.php:650
+#: admin/inc/config.php:724
+msgid "Both left and right sidebars"
+msgstr ""
+
+#: admin/inc/config.php:656
+#: admin/inc/config.php:730
+msgid "Featured image"
+msgstr ""
+
+#: admin/inc/config.php:657
+msgid "Show or hide featured image in the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:667
+#: admin/inc/config.php:741
+msgid "Date"
+msgstr ""
+
+#: admin/inc/config.php:668
+msgid "Show or hide date in the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:678
+#: admin/inc/config.php:752
+msgid "Category"
+msgstr ""
+
+#: admin/inc/config.php:679
+msgid "Show or hide category in the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:690
+msgid "Show or hide author in the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:700
+#: admin/inc/config.php:774
+msgid "Tags"
+msgstr ""
+
+#: admin/inc/config.php:701
+msgid "Show or hide tags in the blog page, the archive page and the search page"
+msgstr ""
+
+#: admin/inc/config.php:713
+msgid "Single post options"
+msgstr ""
+
+#: admin/inc/config.php:718
+msgid "Layout for single post"
+msgstr ""
+
+#: admin/inc/config.php:719
+msgid "Choose the layout for the single post"
+msgstr ""
+
+#: admin/inc/config.php:731
+msgid "Show or hide featured image in the single post"
+msgstr ""
+
+#: admin/inc/config.php:742
+msgid "Show or hide date in the single post"
+msgstr ""
+
+#: admin/inc/config.php:753
+msgid "Show or hide category in the single post"
+msgstr ""
+
+#: admin/inc/config.php:764
+msgid "Show or hide author in the single post"
+msgstr ""
+
+#: admin/inc/config.php:775
+msgid "Show or hide tags in the single post"
+msgstr ""
+
+#: admin/inc/config.php:786
+msgid "Show or hide comments in the single post"
+msgstr ""
+
+#: admin/inc/config.php:798
+msgid "Footer options"
+msgstr ""
+
+#: admin/inc/config.php:802
+msgid "Footer columns"
+msgstr ""
+
+#: admin/inc/config.php:803
+msgid "How many columns should be displayed in your footer"
+msgstr ""
+
+#: admin/inc/config.php:806
+msgid "Two"
+msgstr ""
+
+#: admin/inc/config.php:807
+msgid "Three"
+msgstr ""
+
+#: admin/inc/config.php:821
+msgid "Address"
+msgstr ""
+
+#: admin/inc/config.php:824
+msgid "Bucharest, Unirii 23, Romania"
+msgstr ""
+
+#: admin/inc/config.php:828
+msgid "Twitter Link"
+msgstr ""
+
+#: admin/inc/config.php:829
+msgid "Enter your twitter account link. If you leave this blank the twitter link in the footer wont be displayed"
+msgstr ""
+
+#: admin/inc/config.php:835
+msgid "RSS link"
+msgstr ""
+
+#: admin/inc/config.php:836
+msgid "Enter your RSS link. If you leave this blank the RSS link in the footer wont be displayed"
+msgstr ""
+
+#: admin/inc/config.php:842
+msgid "Linkedin Link"
+msgstr ""
+
+#: admin/inc/config.php:843
+msgid "Enter your Linkedin link. If you leave this blank the linkedin link in the footer wont be displayed"
+msgstr ""
+
+#: admin/inc/config.php:849
+msgid "Copyright"
+msgstr ""
+
+#: admin/inc/config.php:850
+msgid "Enter your copyright. If you leave this blank the copyright in the footer wont be displayed"
+msgstr ""
+
+#: admin/inc/config.php:858
+msgid "Contact options"
+msgstr ""
+
+#: admin/inc/config.php:863
+msgid "Email address"
+msgstr ""
+
+#: admin/inc/config.php:864
+msgid "Enter your email address to appear in footer and contact page.If you leave this blank the email address and the contact form wont be displayed"
+msgstr ""
+
+#: admin/inc/config.php:870
+msgid "Phone number"
+msgstr ""
+
+#: admin/inc/config.php:871
+msgid "Enter your phone number to appear in footer and contact page.If you leave this blank the phone number wont be displayed"
+msgstr ""
+
+#: admin/inc/render.php:229
+msgid "Normal"
+msgstr ""
+
+#: admin/inc/render.php:230
+msgid "Italic"
+msgstr ""
+
+#: admin/inc/render.php:231
+msgid "Bold"
+msgstr ""
+
+#: admin/inc/render.php:232
+msgid "Bold Italic"
+msgstr ""
+
+#: admin/inc/render.php:284
+msgid "No Repeat"
+msgstr ""
+
+#: admin/inc/render.php:285
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: admin/inc/render.php:286
+msgid "Repeat Vertically"
+msgstr ""
+
+#: admin/inc/render.php:287
+msgid "Repeat All"
+msgstr ""
+
+#: admin/inc/render.php:292
+msgid "Top Left"
+msgstr ""
+
+#: admin/inc/render.php:293
+msgid "Top Center"
+msgstr ""
+
+#: admin/inc/render.php:294
+msgid "Top Right"
+msgstr ""
+
+#: admin/inc/render.php:295
+msgid "Middle Left"
+msgstr ""
+
+#: admin/inc/render.php:296
+msgid "Middle Center"
+msgstr ""
+
+#: admin/inc/render.php:297
+msgid "Middle Right"
+msgstr ""
+
+#: admin/inc/render.php:298
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/inc/render.php:299
+msgid "Bottom Center"
+msgstr ""
+
+#: admin/inc/render.php:300
+msgid "Bottom Right"
+msgstr ""
+
+#: admin/inc/render.php:305
+msgid "Scroll Normally"
+msgstr ""
+
+#: admin/inc/render.php:306
+msgid "Fixed in Place"
+msgstr ""
+
+#: admin/layout/main_page.php:20
+msgid "Portofolio features are available in the pro version"
+msgstr ""
+
+#: admin/layout/main_page.php:27
+msgid "View pro version"
+msgstr ""
+
+#: admin/layout/main_page.php:28
+msgid "Check documentation"
+msgstr ""
+
+#: admin/layout/main_page.php:29
+msgid "Forum"
+msgstr ""
+
+#: admin/layout/main_page.php:30
+#: admin/layout/main_page.php:71
+msgid "Save All Changes"
+msgstr ""
+
+#: admin/layout/main_page.php:35
+#: admin/layout/main_page.php:74
+msgid "Options Reset"
+msgstr ""
+
+#: inc/brochure.php:1
+msgid "Download"
+msgstr ""
+
+#: inc/our-services.php:23
+msgid "OUR SERVICES"
+msgstr ""
+
+#: inc/our-skills.php:1
+msgid "OUR SKILLS"
+msgstr ""
+
+#: inc/our-team.php:1
+msgid "OUR TEAM"
+msgstr ""
+
+#: inc/template-tags.php:1
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:1
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:1
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:1
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:1
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/testimonial-options.php:1
+msgid "Testimonial title"
+msgstr ""
+
+#: inc/testimonial-options.php:1
+msgid "Testimonial text"
+msgstr ""
 

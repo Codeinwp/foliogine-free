@@ -17,23 +17,22 @@
     	</div>
 		<div id="subheader">
 
-			Portofolio features are available in the pro version
+			<?php _e('Portofolio features are available in the pro version','foliogine-lite'); ?>
 
     	</div>
 
 		<div id="info_bar">
 
 		 <span class="spinner" ></span>
-			<a href="http://themeisle.com/themes/foliogine-pro/" class="view-pro" target="_blank">View pro version</a>
-			<a href="http://themeisle.com/documentation-foliogine-free" class="view-pro" target="_blank">Check documentation</a>
-			<a href="http://themeisle.com/forums/forum/foliogine-free" class="view-pro" target="_blank">Forum</a>
-			<button  type="button" class="button-primary foliogine_lite_save">
-				<?php _e('Save All Changes','foliogine'); ?>			</button>
+			<a href="<?php echo esc_url( "http://themeisle.com/themes/foliogine-pro/"); ?>" class="view-pro" target="_blank"><?php _e('View pro version','foliogine-lite'); ?></a>
+			<a href="<?php echo esc_url( "http://themeisle.com/documentation-foliogine-free"); ?>" class="view-pro" target="_blank"><?php _e('Check documentation','foliogine-lite'); ?></a>
+			<a href="<?php echo esc_url( "http://themeisle.com/forums/forum/foliogine-free"); ?>" class="view-pro" target="_blank"><?php _e('Forum','foliogine-lite'); ?></a>
+			<button  type="button" class="button-primary foliogine_lite_save"><?php _e('Save All Changes','foliogine-lite'); ?></button>
 
 
 
 		 <span class="spinner spinner-reset" ></span>
-			<button   type="button" class="button submit-button reset-button foliogine_lite_reset"><?php _e('Options Reset','foliogine'); ?></button>
+			<button   type="button" class="button submit-button reset-button foliogine_lite_reset"><?php _e('Options Reset','foliogine-lite'); ?></button>
 		</div><!--.info_bar-->
 
 		<div id="main">
@@ -69,11 +68,10 @@
 
 		<div class="save_bar">
 		 <span class="spinner " ></span>
-			<button  type="button" class="button-primary foliogine_lite_save">
-				<?php _e('Save All Changes','foliogine'); ?>			</button>
+			<button  type="button" class="button-primary foliogine_lite_save"><?php _e('Save All Changes','foliogine-lite'); ?></button>
 
 		 <span class="spinner  spinner-reset" ></span>
-			<button   type="button" class="button submit-button reset-button  foliogine_lite_reset"><?php _e('Options Reset','foliogine'); ?></button>
+			<button type="button" class="button submit-button reset-button  foliogine_lite_reset"><?php _e('Options Reset','foliogine-lite'); ?></button>
 
 
 		</div>
