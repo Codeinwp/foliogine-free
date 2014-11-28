@@ -135,8 +135,4 @@
 </div>
 </section>
 
-<?php
-    $foliogine_lite_id = get_the_ID(); //the current id page
-
-	get_template_part('sections');
- get_footer(); ?>
+<?php get_footer(); ?>

@@ -115,6 +115,24 @@
 										)
 									)
 								),
+								/* Latest posts section */
+								array(
+									"type"=>"group",
+									"name"=>__("Latest posts section options",'foliogine-lite'),
+									"options"=>	array(
+										array(
+											"type"=>"select",
+											"name"=>__("Frontpage",'foliogine-lite'),
+											"description"=>__("Show or hide latest posts on frontpage.",'foliogine-lite'),
+											"id"=>"latestposts_fp",
+											"options"=>array(
+												"show"=>__("Show",'foliogine-lite'),
+												"hide"=>__("Hide",'foliogine-lite')
+											),
+											"default"=>"show"
+										)
+									)
+								),
 								/* Slider section */
 								array(
 									"type"=>"group",
