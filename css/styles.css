@@ -372,11 +372,8 @@ section.services{
 	z-index: 3;
 	}
 section h2{
-	font-family: 'Open Sans', sans-serif; font-weight: 400;
-	font-size: 20px;
-	margin-left: 30px;
+	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 0;
-	text-transform: uppercase;
 	}
 .services h2, .our-team h2, .testimonials h2, .our-skills h2{
 	font-family: 'Open Sans', sans-serif; font-weight: 400;
@@ -1170,12 +1167,17 @@ section.item-details .content .left{
 section.item-details .content .left p{
 	margin-top: 30px;
 	}
-section.item-details .content .left h2, .list-post-content h2{
+section.item-details .content .left h2{
 	text-transform: none;
 	margin-left: 0;
 	font-size: 20px;
 	color: #000;
 	}
+.list-post-content h2 {
+	text-transform: none;
+	margin-left: 0;
+	color: #000;
+}
 h2 a{
 	color: #000 !important;
 	}
@@ -1469,17 +1471,7 @@ body.search {
 	margin-top: 1px;
 	margin-right: 1px;
 	}
-.list-post-content h3{
-	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	padding: 0 10px;
-	text-transform: uppercase;
-	float: left;
-	clear: both;
-	display: block;
-	color:#eddf00;
-	}
+
 .list-post-content p{
 	/*float: left;*/
 	}
@@ -2550,8 +2542,6 @@ section.work .item-box:hover .link-icon,
 .list-post-info time,
 
 .comments .title,
-
-.list-post-content h3,
 
 .comment-box .right .reply,
 

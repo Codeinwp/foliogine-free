@@ -16,11 +16,11 @@
 
 		<?php the_content(); wp_link_pages(); ?>
 
-        <?php if (isset($foliogine_lite_comments) && $foliogine_lite_comments == 'show') { ?>
+       <?php if ( comments_open() || '0' != get_comments_number() ) : ?>
         <div class="comments">
 			<?php comments_template(); ?>
 		</div>
-        <?php } ?>
+       <?php endif; ?> 
 
 	</div> <!-- .container -->
 
