@@ -71,7 +71,7 @@
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php
 								if ( has_post_thumbnail(get_the_ID()) ) {
-									echo get_the_post_thumbnail(get_the_ID(), 'blog-small');
+									echo get_the_post_thumbnail(get_the_ID(), 'foliogine-lite-blog-small');
 								}
 							?>
 							</a>
