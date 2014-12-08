@@ -1844,6 +1844,9 @@ div.line-yellow{
 	-webkit-box-shadow: inset 0 -1px 0 0 #000;
 	box-shadow: inset 0 -1px 0 0 #000;
 }
+.copyright, .copyright:hover {
+	color: #eddf00;
+}
 @media only screen and (min-width : 480px) and (max-width : 768px) {
 	.price_block {width: 50%;}
 	.price_block:nth-child(odd) {border-right: 2px solid transparent;}
