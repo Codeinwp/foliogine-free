@@ -60,11 +60,7 @@ function foliogine_lite_theme_setup() {
 
     add_theme_support( 'post-thumbnails' );
 
-    add_image_size( 'blog-small', 444, 446, true );
-    add_image_size( 'blog-large', 616, 613, true );
-    add_image_size( 'portofolio-thumb', 252, 162, true );
-    add_image_size( 'portofolio-large', 912,387, true );
-    add_image_size( 'our-team-photo', 228, 230, true );
+    add_image_size( 'foliogine-lite-blog-small', 444, 446, true );
 
     require( get_template_directory() . '/inc/custom-header.php' );
     add_theme_support( 'custom-background', $args );

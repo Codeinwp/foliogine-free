@@ -111,7 +111,7 @@
 			<?php		if ( !empty($foliogine_lite_copyright) ):
 							echo '<p>'.esc_html($foliogine_lite_copyright).'</p>';
 						else: ?>
-							<p>Foliogine Lite &copy; <?php echo date('Y'); ?> <br><?php _e('All rights reserved.','foliogine-lite'); ?></p>
+							<p><a class="copyright" href="https://themeisle.com/themes/foliogine-lite/" target="_blank" rel="nofollow">Foliogine Lite</a> &copy; <?php echo date('Y'); ?> <br><?php _e('All rights reserved.','foliogine-lite'); ?></p>
 						<?php	endif;?>
 	</div>
 	</div>

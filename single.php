@@ -65,7 +65,7 @@
 						<?php
 							if (isset($foliogine_lite_featured_image_single) && $foliogine_lite_featured_image_single == 'show') {
 								if ( has_post_thumbnail(get_the_ID()) ) {
-									echo get_the_post_thumbnail(get_the_ID(), 'blog-small');
+									echo get_the_post_thumbnail(get_the_ID(), 'foliogine-lite-blog-small');
 								}
 							}
 						?>
