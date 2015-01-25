@@ -1,5 +1,14 @@
 
 
+### 1.5.1 - 25/01/2015
+
+ Changes: 
+
+
+ * Prefix for add_image_size and fized mobile menu
+ * Added forum link in description and theme link in footer
+
+
 ### 1.4.8 - 04/12/2014
 
  Changes: 
