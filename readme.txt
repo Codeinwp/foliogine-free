@@ -1,4 +1,4 @@
-= Foliogine Lite =
+﻿= Foliogine Lite =
 Author: themeisle.com
 
 Tags: black, yellow, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style,
@@ -16,7 +16,7 @@ Foliogine
 
 
 = License =
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v3.
+Unless otherwise specified, all the theme files, scripts, screenshot and images are licensed under GNU General Public License v3.
 
 The exceptions to this license are as follows:
 
