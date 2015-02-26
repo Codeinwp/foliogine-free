@@ -26,6 +26,10 @@
 
     <header>
 
+        
+
+        
+
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -53,7 +57,7 @@
 
 
             <nav id="site-navigation" class="main-navigation" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'top_menu' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'top_menu','container' => false, 'menu_id' => 'foliogine_lite_nav' ) ); ?>
             </nav><!-- #site-navigation -->
 
 

@@ -2379,7 +2379,15 @@ div.line-yellow{
 
 /* styles for mobile */
 @media screen and (max-width: 600px) {
-    .tinynav { display: block }
+    .tinynav {
+	display: block;
+	color: #FFF;
+	margin: 15px 15px;
+	font-size: 16px;
+	background: #414141;
+	border: 1px solid #DEDEDE;
+	width: 160px;
+	}
     .main-navigation ul { display: none }
 }
 
