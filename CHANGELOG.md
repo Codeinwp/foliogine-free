@@ -1,5 +1,19 @@
 
 
+### 1.5.2 - 26/02/2015
+
+ Changes: 
+
+
+ * Changed tags+description
+ * This fixes #12
+
+The responsive menu is now fixed for mobile devices
+ * Merge pull request #13 from DragosBubu/development
+
+This fixes #12
+
+
 ### 1.5.2 - 16/02/2015
 
  Changes: 
