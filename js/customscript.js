@@ -1,6 +1,6 @@
 jQuery(document).ready(function () { 
     
-	jQuery(".menu").tinyNav({header: 'Navigation'});
+	jQuery("#foliogine_lite_nav").tinyNav({header: 'Navigation'});
    
     jQuery('ul.sub-menu').parent().addClass('dropdown');
     jQuery('li.dropdown').children('a').addClass('dropdown-toggle');
