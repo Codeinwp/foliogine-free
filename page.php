@@ -14,11 +14,16 @@
 
 get_header();
 
+$foliogine_lite_id = get_the_ID();
+
+
 while ( have_posts() ) : the_post();
 
 ?>
        <?php get_template_part("content","page"); ?>
 <?php
 endwhile;
+
+include(locate_template('sections.php'));
 
 get_footer(); ?>
