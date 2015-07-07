@@ -251,3 +251,21 @@ Here you can add your contact details and social links :
 Email address – Enter your email address to appear in footer and contact page.
 
 Phone number – Enter your phone number to appear in footer and contact page.
+
+
+
+
+
+
+
+* Images	 
+	 
+	License: All unsplash.com images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/ 	  
+	
+	new-york-team.png: https://download.unsplash.com/photo-1429681601148-75510b2cef43
+	
+	img-on-screen.jpg: https://download.unsplash.com/reserve/vZZ0oqfTQ7Glod5qJs9g_DSC_0180.jpg
+	
+	screen.png: https://download.unsplash.com/photo-1435058492117-693a295a2ebc
+	
+	slider-bg.jpg: https://download.unsplash.com/46/unsplash_52c319226cefb_1.JPG
