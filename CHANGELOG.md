@@ -1,5 +1,17 @@
 
 
+### 1.5.3 - 07/07/2015
+
+ Changes: 
+
+
+ * this fixes #6 - Theme section from theme options now work. Also added blog template
+ * Merge pull request #16 from cristian-ungureanu/development
+
+this fixes #6 - Theme section from theme options now work.
+ * Replaced non gpl images
+
+
 ### 1.5.2 - 26/02/2015
 
  Changes: 
