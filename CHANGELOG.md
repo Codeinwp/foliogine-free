@@ -1,5 +1,13 @@
 
 
+### 1.5.5 - 17/09/2015
+
+ Changes: 
+
+
+ * Removed upgrade links and fixed theme check errors
+
+
 ### 1.5.3 - 07/07/2015
 
  Changes: 
