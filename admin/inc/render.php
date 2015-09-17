@@ -226,10 +226,10 @@
 		}
 		public function get_font_styles(){
 				return array(
-							'normal'      => __( 'Normal', 'foliogine_lite' ),
-							'italic'      => __( 'Italic', 'foliogine_lite' ),
-							'bold'        => __( 'Bold', 'foliogine_lite' ),
-							'bold italic' => __( 'Bold Italic', 'foliogine_lite' )
+							'normal'      => __( 'Normal', 'foliogine-lite' ),
+							'italic'      => __( 'Italic', 'foliogine-lite' ),
+							'bold'        => __( 'Bold', 'foliogine-lite' ),
+							'bold italic' => __( 'Bold Italic', 'foliogine-lite' )
 							);
 		}
 		public function get_font_sizes(){
@@ -281,29 +281,29 @@
 		public function get_bg_repeat(){
 
 			return array(
-					'no-repeat' => __('No Repeat', 'foliogine_lite'),
-					'repeat-x'  => __('Repeat Horizontally', 'foliogine_lite'),
-					'repeat-y'  => __('Repeat Vertically', 'foliogine_lite'),
-					'repeat'    => __('Repeat All', 'foliogine_lite'),
+					'no-repeat' => __('No Repeat', 'foliogine-lite'),
+					'repeat-x'  => __('Repeat Horizontally', 'foliogine-lite'),
+					'repeat-y'  => __('Repeat Vertically', 'foliogine-lite'),
+					'repeat'    => __('Repeat All', 'foliogine-lite'),
 					);
 		}
 		public function get_bg_position(){
 			return array(
-						'top left'      => __('Top Left', 'foliogine_lite'),
-						'top center'    => __('Top Center', 'foliogine_lite'),
-						'top right'     => __('Top Right', 'foliogine_lite'),
-						'center left'   => __('Middle Left', 'foliogine_lite'),
-						'center center' => __('Middle Center', 'foliogine_lite'),
-						'center right'  => __('Middle Right', 'foliogine_lite'),
-						'bottom left'   => __('Bottom Left', 'foliogine_lite'),
-						'bottom center' => __('Bottom Center', 'foliogine_lite'),
-						'bottom right'  => __('Bottom Right', 'foliogine_lite')
+						'top left'      => __('Top Left', 'foliogine-lite'),
+						'top center'    => __('Top Center', 'foliogine-lite'),
+						'top right'     => __('Top Right', 'foliogine-lite'),
+						'center left'   => __('Middle Left', 'foliogine-lite'),
+						'center center' => __('Middle Center', 'foliogine-lite'),
+						'center right'  => __('Middle Right', 'foliogine-lite'),
+						'bottom left'   => __('Bottom Left', 'foliogine-lite'),
+						'bottom center' => __('Bottom Center', 'foliogine-lite'),
+						'bottom right'  => __('Bottom Right', 'foliogine-lite')
 						);
 		}
 		public function get_bg_attachment(){
 			return array(
-					'scroll' => __('Scroll Normally', 'optionsframework'),
-					'fixed'  => __('Fixed in Place', 'optionsframework')
+					'scroll' => __('Scroll Normally', 'foliogine-lite'),
+					'fixed'  => __('Fixed in Place', 'foliogine-lite')
 					);
 
 		}

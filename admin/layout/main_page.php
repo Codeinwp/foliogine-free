@@ -15,16 +15,10 @@
 			<div class="clear"></div>
 
     	</div>
-		<div id="subheader">
-
-			<?php _e('Portofolio features are available in the pro version','foliogine-lite'); ?>
-
-    	</div>
 
 		<div id="info_bar">
 
 		 <span class="spinner" ></span>
-			<a href="<?php echo esc_url( "http://themeisle.com/themes/foliogine-pro/"); ?>" class="view-pro" target="_blank"><?php _e('View pro version','foliogine-lite'); ?></a>
 			<a href="<?php echo esc_url( "http://themeisle.com/documentation-foliogine-free"); ?>" class="view-pro" target="_blank"><?php _e('Check documentation','foliogine-lite'); ?></a>
 			<a href="<?php echo esc_url( "http://themeisle.com/forums/forum/foliogine-free"); ?>" class="view-pro" target="_blank"><?php _e('Forum','foliogine-lite'); ?></a>
 			<button  type="button" class="button-primary foliogine_lite_save"><?php _e('Save All Changes','foliogine-lite'); ?></button>
